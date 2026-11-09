@@ -1,0 +1,153 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./output.css" rel="stylesheet" />
+    <title>Velo</title>
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- HERO SECTION  -->
+    <main
+      class="bg-[url(imgs/hero/bg.png)] bg-center bg-no-repeat bg-cover min-h-screen overflow-y-scroll sm:w-screen"
+    >
+      <div class="max-w-7xl mx-auto px-6 sm:px-15 py-4">
+        <!-- header -->
+        <header class="flex justify-between items-center">
+          <!-- header part 01 -->
+          <nav
+            class="hidden md:flex md:justify-between md:items-center md:gap-25 text-primary/90"
+          >
+            <!-- logo -->
+            <a href="#home" class="font-semibold text-xl">Velo</a>
+
+            <!-- nav links -->
+            <ul class="flex justify-center items-center gap-7">
+              <li class="duration-300 transition-all active:scale-105">
+                <a href="#HowItWork" class="text-sm">How it Work</a>
+              </li>
+              <li class="duration-300 transition-all active:scale-105">
+                <a href="#Features">Features</a>
+              </li>
+              <li class="duration-300 transition-all active:scale-105">
+                <a href="#Pricing">Pricing</a>
+              </li>
+              <li class="duration-300 transition-all active:scale-105">
+                <a href="#Reviews">Reviews</a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="md:hidden">
+            <!-- menu icon -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              class="size-5 text-primary"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M2 4.75A.75.75 0 0 1 2.75 4h14.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 4.75ZM2 10a.75.75 0 0 1 .75-.75h14.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 10Zm0 5.25a.75.75 0 0 1 .75-.75h14.5a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1-.75-.75Z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </div>
+
+          <!-- header part 02 -->
+          <div class="flex justify-center items-center gap-4 text-primary">
+            <button
+              class="px-5 py-2 hover:bg-white/10 duration-300 transition-all active:scale-105 rounded-4xl text-white"
+            >
+              Sign in
+            </button>
+            <button
+              class="px-5 py-2 bg-primary text-black rounded-4xl font-semibold duration-300 transition-all active:scale-105"
+            >
+              Start Tracking
+            </button>
+          </div>
+        </header>
+
+        <!-- content -->
+        <!-- h-170 sm:h-110 -->
+        <div class="grid grid-cols-1 md:grid-cols-2 min-h-[80vh] mt-15 mb-5">
+          <!-- left content -->
+          <div class="flex flex-col md:justify-between">
+            <div class="flex flex-col gap-2">
+              <h2 class="text-6xl font-semibold text-primary">
+                Your health,
+                <br />
+                finally legible
+              </h2>
+              <div class="flex mt-4 gap-4 flex-wrap">
+                <button
+                  class="px-5 py-2 text-nowrap bg-primary text-black rounded-4xl font-semibold duration-300 transition-all active:scale-105"
+                >
+                  Start Tracking Now
+                </button>
+                <button
+                  class="px-5 py-2 bg-white/10 duration-300 transition-all active:scale-105 rounded-4xl text-white"
+                >
+                  Watch a Demo
+                </button>
+              </div>
+            </div>
+
+            <div class="mt-4 sm:mt-0">
+              <p class="text-primary/95 w-80">
+                Vela turns your biomarkers, sleep, and activity into one clear
+                picture so you stop guessing and start acting.
+              </p>
+            </div>
+          </div>
+
+          <!-- right content -->
+          <div class="flex flex-col justify-end md:items-end">
+            <div
+              class="p-2 bg-white/10 mt-2 sm:mt-0 w-auto xs:w-80 rounded-2xl text-white"
+            >
+              <div>
+                <img
+                  src="imgs/hero/secondary.png"
+                  class="w-100 h-18 rounded-2xl object-cover"
+                  alt=""
+                />
+              </div>
+              <div class="mt-4">
+                <h4>Track 100+ Biomarkers</h4>
+                <div class="flex gap-2 items-center">
+                  <p class="text-white/80">See what we measure</p>
+                  <button class="duration-300 transition-all active:scale-105">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-3 font-semibold text-primary"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="m8.25 4.5 7.5 7.5-7.5 7.5"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

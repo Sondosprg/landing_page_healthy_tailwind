@@ -3,8 +3,8 @@
 @theme {
   --color-primary: #fff;
   --color-secondary: #000;
-  --color-accent: blue;
-  /* --gray : gray-stone-200 */
+  --color-accent: var(--color-blue-600);
+  --color-gray: var(--color-gray-500);
 
   --breakpoint-xs: 400px;
 }
@@ -17,4 +17,8 @@
   ::-webkit-scrollbar {
     display: none;
   }
+  /* html,
+  body {
+    @apply overflow-x-hidden;
+  } */
 }

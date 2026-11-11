@@ -38,7 +38,7 @@
         <header class="flex justify-between items-center">
           <!-- header part 01 -->
           <nav
-            class="hidden md:flex md:justify-between md:items-center md:gap-25 text-primary/90"
+            class="hidden md:flex md:justify-between md:items-center md:gap-8 lg:gap-25 text-primary/90"
           >
             <!-- logo -->
             <a href="#home" class="font-semibold text-xl">Velo</a>
@@ -77,14 +77,14 @@
           </div>
 
           <!-- header part 02 -->
-          <div class="flex justify-center items-center gap-4 text-primary">
+          <div class="flex  justify-center items-center gap-4 text-primary">
             <button
-              class="px-5 py-2 hover:bg-white/10   duration-300 transition-all active:scale-105 rounded-4xl text-white"
+              class="hidden xs:flex px-5 py-2  hover:bg-linear-to-r hover:from-transparent hover:via-primary/30 hover:to-transparent py-2 hover:bg-white/10 duration-300 transition-all active:scale-105 rounded-4xl text-white"
             >
               Sign in
             </button>
             <button
-              class="px-5 py-2 bg-primary text-black rounded-4xl font-semibold duration-300 transition-all active:scale-105"
+              class=" px-5 py-2 bg-primary text-black rounded-4xl font-semibold duration-300 transition-all active:scale-105"
             >
               Start Tracking
             </button>
@@ -108,11 +108,10 @@
                 >
                   Start Tracking Now
                 </button>
-                <button
-                  class="px-5 py-2 backdrop-blur-xs bg-white/10 duration-300 transition-all active:scale-105 rounded-4xl text-white"
-                >
-                  Watch a Demo
+              <button class=" px-5 bg-linear-to-r from-transparent via-primary/30 to-transparent py-2 bg-white/10 duration-300 transition-all active:scale-105 rounded-4xl text-white">
+              Watch a Demo
                 </button>
+
               </div>
             </div>
 
@@ -172,14 +171,14 @@
         >
           <!-- trust  -->
           <div>
-            <p class="font-semibold">
+            <p class="font-semiboldtext-secondary">
               Trusted by health-conscious humans across 40+ countries
             </p>
           </div>
 
           <!-- companies names -->
           <div
-            class="flex mt-5 w-100 justify-center items-center gap-6 text-gray text-xl sm:text-3xl flex-col sm:flex-row"
+            class="flex mt-5 w-100 justify-center items-center gap-6 text-gray text-xl sm:text-3xl flex-wrap  w-full flex-row"
           >
             <div>
               <svg
@@ -234,13 +233,14 @@
     </section>
 
     <!-- HOW IT WORKS -->
-    <section id="HowItWork" class="min-h-screen bg-[#F6F6F6]">
-      <div class="max-w-7xl mx-auto px-6 sm:px-15 py-2 sm:py-4">
+    <section id="HowItWork" class="h-auto bg-[#F6F6F6]">
+      <div class="max-w-7xl mx-auto px-6 sm:px-15 py-2 sm:py-4 ">
         <div
-          class="flex justify-center items-center flex-col gap-7 sm:gap-14 py-7 sm:py-14"
+          class="flex justify-center items-center flex-col gap-7 sm:gap-14 py-7 sm:py-14  bg-red-100 "
         >
           <!-- header -->
-          <div class="flex flex-col justify-center items-center gap-2">
+           <!-- todo : fix this child to left -->
+          <div class="flex flex-col justify-center items-center gap-2  bg-red-200 w-full">
             <h6 class="text-accent text-sm font-semibold">HOW IT WORKS</h6>
             <h2 class="text-4xl font-semibold">Scattered to seen,</h2>
             <h2 class="text-4xl font-semibold">in three steps</h2>
@@ -248,7 +248,7 @@
 
           <!-- card of steps -->
           <div
-            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 items-center justify-center min-h-100"
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 items-center justify-center min-h-100"
           >
             <!-- step 1  -->
             <div class="space-y-4">
@@ -881,7 +881,7 @@
             </p>
            </div>
 
-           <form action="" class="flex  justify-between bg-[#262626] w-100 py-2 pr-2 pl-4 rounded-4xl
+           <form action="" class="flex  justify-between bg-[#262626] w-aut sm:w-100 py-2 pr-2 pl-4 rounded-4xl
            outline-1 outline-primary/20 ">
             <input type="email" autocomplete="true" autofocus autocorrect="on" 
             name="email" placeholder="Email Address"

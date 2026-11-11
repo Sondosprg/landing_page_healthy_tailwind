@@ -508,10 +508,10 @@
     <section id="Pricing" class="min-h-screen bg-[#F6F6F6]">
       <div class="max-w-7xl mx-auto px-6 sm:px-15 py-2 sm:py-4">
         <div
-          class="flex justify-center items-center flex-col  gap-7 sm:gap-14 py-7 sm:py-14"
+          class="flex    justify-center items-center flex-col  gap-7 sm:gap-14 py-7 sm:py-14"
         >
           <!-- header of pricing -->
-          <div class="flex flex-col justify-center items-center gap-2">
+          <div class="flex flex-col sm:justify-center sm:items-center gap-2">
             <h6 class="text-accent text-sm font-semibold">PRICING</h6>
             <h2 class="text-4xl font-semibold">Two plans,
               <h2 class="text-4xl font-semibold">No surprises</h2>
@@ -527,11 +527,11 @@
 
           <!-- plans of pricing -->
           <div
-            class="flex flex-col md:flex-row  gap-4 justify-center items-center w-full"
+            class="flex flex-col md:flex-row  gap-4  flex-wrap sm:justify-center sm:items-center w-full"
           >
             <!-- plan 1  -->
          <div class="bg-linear-to-br  from-accent/80 via-transparent to-accent/80 p-[0.1rem] rounded-xl">
-             <div class="p-4  bg-primary sm:w-100 h-[508px] rounded-xl">
+             <div class="p-4  bg-primary sm:w-100  h-[508px] rounded-xl">
 
                 <div class="flex justify-between">
                 <h4 class="font-semibold">Personal</h4>
@@ -682,6 +682,139 @@
 
          
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+      <section  class="min-h-screen">
+      <div class="max-w-7xl mx-auto px-6 sm:px-15 py-2 sm:py-4">
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 items-center justify-between
+          py-7 sm:py-14 gap-4 sm:gap-0"
+        >
+          <!-- header of faq -->
+          <div class="flex flex-col  gap-8  h-full ">
+            <div class="space-y-2">
+              <h6 class="text-accent text-sm font-semibold">FAQ</h6>
+            <h2 class="text-4xl font-semibold">
+              Common questions
+            </h2>
+            </div>
+            <button class="px-5 py-2 w-fit bg-secondary duration-300 transition-all active:scale-105 rounded-4xl text-white">
+              Ask your Questions
+              </button>
+           
+          </div>
+
+          <!-- Questions -->
+          <div class="flex flex-col  h-full ">
+
+            <!-- Q1 -->
+             <div class=" py-6 border-b-1 border-gray/10">
+              <div class="flex justify-between">
+                  <h4 class="font-semibold">What do I need to use Vela?</h4>
+                  <button onclick="p.classList.toggle('hidden')" class="flex justify-center items-center size-6 text-xs transition-all duration-300 active:scale-105  rounded-full hover:bg-gray/10">
+                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4 text-gray">
+                        <path fill-rule="evenodd" d="M12 3.75a.75.75 0 0 1 .75.75v6.75h6.75a.75.75 0 0 1 0 1.5h-6.75v6.75a.75.75 0 0 1-1.5 0v-6.75H4.5a.75.75 0 0 1 0-1.5h6.75V4.5a.75.75 0 0 1 .75-.75Z" clip-rule="evenodd" />
+                      </svg>
+                  </button>
+
+
+
+              </div>
+              <div id="p"  class="hidden pt-4  transition-all duration-300 ease-linear">
+
+   <p class="text-gray font-medium  text-xs ">
+    Just one thing: any health data source you already have. That includes Apple Health, Google Fit, Oura, Whoop, Garmin, Fitbit, and 40+ others. If you've ever uploaded a blood panel, we'll read that too.
+  </p>
+
+              </div>
+             </div>
+
+                 <!-- Q2 -->
+             <div class="py-6 border-b-1 border-gray/10">
+              
+              <div class="flex justify-between">
+                  <h4 class="font-semibold">How long until Vela starts surfacing patterns?</h4>
+                  <button class="flex justify-center items-center size-6 text-xs transition-all duration-300 active:scale-105  rounded-full hover:bg-gray/10">
+                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4 text-gray">
+                        <path fill-rule="evenodd" d="M12 3.75a.75.75 0 0 1 .75.75v6.75h6.75a.75.75 0 0 1 0 1.5h-6.75v6.75a.75.75 0 0 1-1.5 0v-6.75H4.5a.75.75 0 0 1 0-1.5h6.75V4.5a.75.75 0 0 1 .75-.75Z" clip-rule="evenodd" />
+                      </svg>
+                  </button>
+              </div>
+              <p class="t
+              ext-gray font-medium hidden text-xs">Just one thing: any health data source you already have. That includes Apple Health, Google Fit, Oura, Whoop, Garmin, Fitbit, and 40+ others. If you've ever uploaded a blood panel, we'll read that too.</p>
+             </div>
+
+
+             <!-- Q3 -->
+             <div class="py-6 border-b-1 border-gray/10">
+              
+              <div class="flex justify-between">
+                  <h4 class="font-semibold">Do I need a doctor's referral?</h4>
+                  <button class="flex justify-center items-center size-6 text-xs transition-all duration-300 active:scale-105  rounded-full hover:bg-gray/10">
+                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4 text-gray">
+                        <path fill-rule="evenodd" d="M12 3.75a.75.75 0 0 1 .75.75v6.75h6.75a.75.75 0 0 1 0 1.5h-6.75v6.75a.75.75 0 0 1-1.5 0v-6.75H4.5a.75.75 0 0 1 0-1.5h6.75V4.5a.75.75 0 0 1 .75-.75Z" clip-rule="evenodd" />
+                      </svg>
+                  </button>
+              </div>
+              <p class="t
+              ext-gray font-medium hidden text-xs">Just one thing: any health data source you already have. That includes Apple Health, Google Fit, Oura, Whoop, Garmin, Fitbit, and 40+ others. If you've ever uploaded a blood panel, we'll read that too.</p>
+             </div>
+
+             <!-- Q4 -->
+             <div class="py-6 border-b-1 border-gray/10">
+              
+              <div class="flex justify-between">
+                  <h4 class="font-semibold">Who can see my health data?</h4>
+                  <button class="flex justify-center items-center size-6 text-xs transition-all duration-300 active:scale-105  rounded-full hover:bg-gray/10">
+                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4 text-gray">
+                        <path fill-rule="evenodd" d="M12 3.75a.75.75 0 0 1 .75.75v6.75h6.75a.75.75 0 0 1 0 1.5h-6.75v6.75a.75.75 0 0 1-1.5 0v-6.75H4.5a.75.75 0 0 1 0-1.5h6.75V4.5a.75.75 0 0 1 .75-.75Z" clip-rule="evenodd" />
+                      </svg>
+                  </button>
+              </div>
+              <p class="t
+              ext-gray font-medium hidden text-xs">Just one thing: any health data source you already have. That includes Apple Health, Google Fit, Oura, Whoop, Garmin, Fitbit, and 40+ others. If you've ever uploaded a blood panel, we'll read that too.</p>
+             </div>
+
+                  <!-- Q5 -->
+             <div class="py-6 border-b-1 border-gray/10">
+              
+              <div class="flex justify-between">
+                  <h4 class="font-semibold">Can I export or delete everything?</h4>
+                  <button class="flex justify-center items-center size-6 text-xs transition-all duration-300 active:scale-105  rounded-full hover:bg-gray/10">
+                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4 text-gray">
+                        <path fill-rule="evenodd" d="M12 3.75a.75.75 0 0 1 .75.75v6.75h6.75a.75.75 0 0 1 0 1.5h-6.75v6.75a.75.75 0 0 1-1.5 0v-6.75H4.5a.75.75 0 0 1 0-1.5h6.75V4.5a.75.75 0 0 1 .75-.75Z" clip-rule="evenodd" />
+                      </svg>
+                  </button>
+              </div>
+              <p class="t
+              ext-gray font-medium hidden text-xs">Just one thing: any health data source you already have. That includes Apple Health, Google Fit, Oura, Whoop, Garmin, Fitbit, and 40+ others. If you've ever uploaded a blood panel, we'll read that too.</p>
+             </div>
+
+
+             <!-- Q6 -->
+             <div class="py-6 border-b-1 border-gray/10">
+              
+              <div class="flex justify-between">
+                  <h4 class="font-semibold">How is this different from Apple Health or my Oura app?</h4>
+                  <button class="flex justify-center items-center size-6 text-xs transition-all duration-300 active:scale-105  rounded-full hover:bg-gray/10">
+                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4 text-gray">
+                        <path fill-rule="evenodd" d="M12 3.75a.75.75 0 0 1 .75.75v6.75h6.75a.75.75 0 0 1 0 1.5h-6.75v6.75a.75.75 0 0 1-1.5 0v-6.75H4.5a.75.75 0 0 1 0-1.5h6.75V4.5a.75.75 0 0 1 .75-.75Z" clip-rule="evenodd" />
+                      </svg>
+                  </button>
+              </div>
+              <p class="t
+              ext-gray font-medium hidden text-xs">Just one thing: any health data source you already have. That includes Apple Health, Google Fit, Oura, Whoop, Garmin, Fitbit, and 40+ others. If you've ever uploaded a blood panel, we'll read that too.</p>
+             </div>
+
+
+
+          </div>
+          </div>
+
+       
         </div>
       </div>
     </section>

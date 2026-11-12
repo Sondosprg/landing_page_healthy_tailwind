@@ -376,19 +376,21 @@
     </section>
 
     <!-- REVIEWS -->
-    <section id="Reviews" class="min-h-screen">
+    <section id="Reviews" class="h-auto ">
       <div class="max-w-7xl mx-auto px-6 sm:px-15 py-2 sm:py-4">
-        <div class="flex flex-col gap-2 md:min-w-3xl">
+        <!-- md:min-w-3xl" -->
+        <div class="flex flex-col gap-2 py-7 sm:py-14 ">
           <!-- header -->
+           <!-- todo: fix button gap  -->
           <div
-            class="flex flex-col md:flex-row gap-4 justify-between sm:gap-14 py-7 sm:py-14"
+            class="flex flex-col md:flex-row  md:justify-between gap-4   py-6 md:py-10 lg:py-14"
           >
-            <div class="space-y-2">
+            <div class="space-y-2 ">
               <h6 class="text-accent text-sm font-semibold">REVIEWS</h6>
               <h2 class="text-4xl font-semibold">People who finally get it</h2>
             </div>
 
-            <div>
+            <div class=" md:self-end ">
               <button
                 class="px-5 py-2 bg-secondary duration-300 transition-all active:scale-105 rounded-4xl text-white"
               >
@@ -399,17 +401,18 @@
 
           <!-- cards of reviews  (carousel)  -->
           <div
-            class="grid grid-cols-[100%_100%_100%] md:grid-cols-[60%_60%_60%] gap-4 max-h-100 sm:min-w-100 overflow-y-scroll sm:overflow-x-scroll"
+            class="grid  grid-cols-[100%_100%_100%] md:grid-cols-[60%_60%_60%] gap-4 max-h-100 sm:min-w-100 overflow-y-scroll sm:overflow-x-scroll"
           >
             <!-- card review 01 -->
-            <div class="relative">
+            <div class="relative ">
               <img
                 src="imgs/reviews/01.jpg"
                 alt=""
-                class="rounded-2xl h-100 w-100 md:w-full"
+                class="rounded-2xl h-100 w-full object-cover"
               />
-              <div class="absolute p-8 inset-0 flex justify-between flex-col">
-                <h4 class="text-primary font-semibold text-md w-100">
+
+              <div class="absolute p-4 sm:p-8 inset-0 flex justify-between flex-col">
+                <h4 class="text-primary font-semibold text-md w-auto">
                   I stopped using four different health apps and consolidated
                   into Vela. My morning routine is now one tab instead of seven.
                 </h4>
@@ -418,17 +421,18 @@
                   <p class="text-gray">28, Austin</p>
                 </div>
               </div>
+
             </div>
 
             <!-- card review 02 -->
-            <div class="relative">
+            <div class="relative  ">
               <img
                 src="imgs/reviews/02.jfif"
                 alt=""
-                class="rounded-2xl h-100 w-100 md:w-full object-cover"
+                class="rounded-2xl h-100 w-full object-cover"
               />
               <div class="absolute p-8 inset-0 flex justify-between flex-col">
-                <h4 class="text-primary font-semibold text-md">
+                <h4 class="text-primary font-semibold text-md w-auto">
                   My doctor said my labs were 'fine.' Vela cross-referenced
                   three markers and fla a thyroid issue that had been missed fo
                   years
@@ -441,14 +445,14 @@
             </div>
 
             <!-- card review 03-->
-            <div class="relative">
+            <div class="relative ">
               <img
                 src="imgs/reviews/03.jfif"
                 alt=""
-                class="rounded-2xl w-100 h-100 md:w-full"
+                class="rounded-2xl h-100  w-full object-cover"
               />
               <div class="absolute p-8 inset-0 flex justify-between flex-col">
-                <h4 class="text-primary font-semibold text-md w-90">
+                <h4 class="text-primary font-semibold text-md w-auto">
                   Vela helped me track my sleep and recovery patterns better
                   than any wearable. I finally have clear insights without
                   sorting through endless raw data

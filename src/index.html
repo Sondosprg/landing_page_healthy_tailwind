@@ -236,10 +236,10 @@
     <section id="HowItWork" class="h-auto bg-[#F6F6F6]">
       <div class="max-w-7xl mx-auto px-6 sm:px-15 py-2 sm:py-4 ">
         <div
-          class="flex justify-center items-center flex-col gap-7 sm:gap-14 py-7 sm:py-14  bg-red-100 "
+          class="flex justify-center items-center flex-col gap-7 sm:gap-14 py-7 sm:py-14   "
         >
           <!-- header -->
-          <div class="flex flex-col justify-center items-center gap-2  bg-red-200 w-full">
+          <div class="flex flex-col justify-center items-center gap-2   w-full">
             <h6 class="text-accent text-sm font-semibold">HOW IT WORKS</h6>
             <h2 class="text-4xl font-semibold">Scattered to seen,</h2>
             <h2 class="text-4xl font-semibold">in three steps</h2>
@@ -303,11 +303,11 @@
     </section>
 
     <!-- FEATURES -->
-    <section id="Features" class="sm:min-h-screen">
+    <section id="Features" class=" h-auto">
       <div class="max-w-7xl mx-auto px-6 sm:px-15 py-2 sm:py-4">
-        <div class="grid grid-rows-[1fr_auto] gap-y-7 sm:gap-14 py-7 sm:py-14">
+        <div class="grid grid-rows-[1fr_auto] gap-y-7 sm:gap-14 py-7 sm:py-14 ">
           <!-- header -->
-          <div class="grid md:grid-cols-[0.5fr_2fr_1fr] h-fit gap-2 row-span-1">
+          <div class="grid md:grid-cols-[0.5fr_2fr_0.5fr] h-fit gap-2 row-span-1">
             <div class="md:col-start-2 md:pl-4">
               <h6 class="text-accent text-sm font-semibold">CORE FEATURES</h6>
               <h2 class="text-4xl font-semibold">The signals that matter,</h2>
@@ -317,28 +317,29 @@
 
           <!-- content of feature -->
           <div
-            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-[0.5fr_2fr_1fr] gap-4 items-center justify-center"
+            class="  py-2 w-full  grid grid-cols-1 md:grid-cols-[auto_1fr]
+            lg:grid-cols-[0.5fr_2fr_1fr] gap-4 md:gap-x-10 items-center justify-center"
           >
             <!-- side bar  -->
-            <div class="flex space-y-4 h-full w-full">
-              <ul class="flex items-center justify-center sm:block">
-                <li class="border-l-2 border-accent px-4">
+            <div class="flex  space-y-4 h-full w-full   ">
+              <ul class="flex items-center justify-center md:block overflow-x-scroll">
+                <li class="border-l-2 border-accent px-2 py-1 ">
                   <button class="p-2">Connect</button>
                 </li>
-                <li class="p-2">
+                <li class="px-2 py-1 ">
                   <button class="p-2">See</button>
                 </li>
-                <li class="p-2">
+                <li class="px-2 py-1">
                   <button class="p-2">Act</button>
                 </li>
-                <li class="p-2">
+                <li class="px-2 py-1">
                   <button class="p-2">Ask</button>
                 </li>
               </ul>
             </div>
 
-            <!-- content  -->
-            <div class="space-y-4 h-full w-full">
+            <!-- image content -->
+            <div class="space-y-4 h-full w-full   ">
               <img
                 src="imgs/features/connect.png"
                 alt=""
@@ -347,7 +348,7 @@
             </div>
 
             <!-- explanations -->
-            <div class="space-y-4 md:space-y-8 h-full w-full">
+            <div class="space-y-4 md:space-y-8 h-full w-full md:col-span-2 lg:col-span-1 ">
               <div class="space-y-2 md:space-y-4">
                 <h4 class="font-semibold text-2xl">
                   Every wearable, every <br />
@@ -369,6 +370,7 @@
               </div>
             </div>
           </div>
+
         </div>
       </div>
     </section>

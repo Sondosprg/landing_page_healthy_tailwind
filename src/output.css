@@ -1048,6 +1048,9 @@
     .sm\:gap-2 {
       gap: calc(var(--spacing) * 2);
     }
+    .sm\:gap-8 {
+      gap: calc(var(--spacing) * 8);
+    }
     .sm\:gap-14 {
       gap: calc(var(--spacing) * 14);
     }
@@ -1065,6 +1068,9 @@
     }
     .sm\:py-4 {
       padding-block: calc(var(--spacing) * 4);
+    }
+    .sm\:py-6 {
+      padding-block: calc(var(--spacing) * 6);
     }
     .sm\:py-14 {
       padding-block: calc(var(--spacing) * 14);
@@ -1185,6 +1191,9 @@
     }
     .md\:justify-between {
       justify-content: space-between;
+    }
+    .md\:gap-0 {
+      gap: 0px;
     }
     .md\:gap-4 {
       gap: calc(var(--spacing) * 4);

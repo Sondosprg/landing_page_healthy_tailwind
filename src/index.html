@@ -381,7 +381,6 @@
         <!-- md:min-w-3xl" -->
         <div class="flex flex-col gap-2 py-7 sm:py-14 ">
           <!-- header -->
-           <!-- todo: fix button gap  -->
           <div
             class="flex flex-col md:flex-row  md:justify-between gap-4   py-6 md:py-10 lg:py-14"
           >
@@ -510,13 +509,14 @@
     </section>
 
     <!-- PRICING -->
-    <section id="Pricing" class="min-h-screen bg-[#F6F6F6]">
+    <section id="Pricing" class="h-auto bg-[#F6F6F6]">
       <div class="max-w-7xl mx-auto px-6 sm:px-15 py-2 sm:py-4">
         <div
-          class="flex    justify-center items-center flex-col  gap-7 sm:gap-14 py-7 sm:py-14"
+          class="flex  justify-center items-center flex-col  gap-7 sm:gap-14 py-7 sm:py-14"
         >
           <!-- header of pricing -->
-          <div class="flex flex-col sm:justify-center sm:items-center gap-2">
+          <div class="flex flex-col  w-full sm:justify-center sm:items-center gap-2
+          ">
             <h6 class="text-accent text-sm font-semibold">PRICING</h6>
             <h2 class="text-4xl font-semibold">Two plans,
               <h2 class="text-4xl font-semibold">No surprises</h2>
@@ -531,14 +531,15 @@
           </div>
 
           <!-- plans of pricing -->
+           <!-- flex flex-col md:flex-row  gap-4  flex-wrap sm:justify-center sm:items-center w-full -->
           <div
-            class="flex flex-col md:flex-row  gap-4  flex-wrap sm:justify-center sm:items-center w-full"
+            class="grid grid-cols-1 lg:grid-cols-[1fr_1fr] w-full sm:w-auto gap-4"
           >
             <!-- plan 1  -->
-         <div class="bg-linear-to-br  from-accent/80 via-transparent to-accent/80 p-[0.1rem] rounded-xl">
-             <div class="p-4  bg-primary sm:w-100  h-[508px] rounded-xl">
+         <div class="bg-linear-to-br   from-accent/80 via-transparent to-accent/80 p-[0.1rem] rounded-xl">
+             <div class="p-4  bg-primary sm:w-100  h-auto rounded-xl">
 
-                <div class="flex justify-between">
+                <div class="flex  flex-wrap justify-between">
                 <h4 class="font-semibold">Personal</h4>
                 <button class="text-accent font-semibold text-xs bg-accent/10 rounded-2xl py-1 px-2">Most popular</button>
                 </div>
@@ -551,13 +552,13 @@
                   </div>
 
                   <p class="text-gray font-medium text-xs">Billed annually · $144/year</p>
-                 <button class="px-5 py-2 mt-4 bg-secondary duration-300 transition-all active:scale-105 rounded-4xl text-white">
+                 <button class="px-5 py-2  mt-4 bg-secondary duration-300 transition-all active:scale-105 rounded-4xl text-white">
                  Start your 14-day trial
                 </button>
 
                 </div>
 
-                <div class="pt-6">
+                <div class="pt-4 sm:pt-6">
                   <h4 class="text-xs text-gray">Everything included</h4>
                   <ul class="py-4 px-2 space-y-4">
                     <li class="flex gap-1 ">
@@ -605,16 +606,13 @@
                   </ul>
 
                 </div>
-
-                
-
  
             </div>
 
          </div>
             <!-- plan 2  -->
-                     <div class="border-[0.1rem]  border-gray/5 rounded-xl">
-             <div class="p-4  bg-primary sm:w-100 h-[508px]  rounded-xl">
+                     <div class="border-[0.1rem]   border-gray/5 rounded-xl">
+             <div class="p-4  bg-primary sm:w-100 h-full  rounded-xl">
 
                 <div >
                 <h4 class="font-semibold">Family</h4>
@@ -634,7 +632,7 @@
 
                 </div>
 
-                <div class="pt-6">
+                <div class="pt-4 sm:pt-6">
                   <h4 class="text-xs text-gray">Everything included</h4>
                   <ul class="py-4 px-2 space-y-4">
                     <li class="flex gap-1 ">

@@ -1,901 +1,854 @@
 <!doctype html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="./output.css" rel="stylesheet" />
-    <title>Velo</title>
 
-    <!-- fonts -->
-    <link defer rel="preconnect" href="https://fonts.googleapis.com" />
-    <link defer rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      defer
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- css file -->
+  <link href="./output.css" rel="stylesheet" />
+  <title>Velo</title>
+  <!-- fonts -->
+  <link defer rel="preconnect" href="https://fonts.googleapis.com" />
+  <link defer rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link defer
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+    rel="stylesheet" />
+</head>
 
-    <!-- swiper library -->
-    <link
-      defer
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
-    />
+<body>
+  <!-- HERO SECTION  -->
+  <main id="Home" class="bg-[url(imgs/hero/bg.png)] bg-center bg-no-repeat bg-cover min-h-screen overflow-y-scroll">
+    <div class="max-w-7xl mx-auto px-6 sm:px-15 py-4">
+      <!-- header -->
+      <header class="flex justify-between items-center">
+        <!-- header part 01 -->
+        <nav class="hidden md:flex md:justify-between md:items-center md:gap-8 lg:gap-25 text-primary/90">
+          <!-- logo -->
+          <a href="#home" class="font-semibold text-xl">Velo</a>
 
-    <script
-      defer
-      src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"
-    ></script>
-  </head>
-  <body>
-    <!-- HERO SECTION  -->
-    <main
-      id="Home"
-      class="bg-[url(imgs/hero/bg.png)] bg-center bg-no-repeat bg-cover min-h-screen overflow-y-scroll"
-    >
-      <div class="max-w-7xl mx-auto px-6 sm:px-15 py-4">
-        <!-- header -->
-        <header class="flex justify-between items-center">
-          <!-- header part 01 -->
-          <nav
-            class="hidden md:flex md:justify-between md:items-center md:gap-8 lg:gap-25 text-primary/90"
-          >
-            <!-- logo -->
-            <a href="#home" class="font-semibold text-xl">Velo</a>
+          <!-- nav links -->
+          <ul class="flex justify-center items-center gap-7">
+            <li class="duration-300 transition-all active:scale-105">
+              <a href="#HowItWork" class="text-sm">How it Work</a>
+            </li>
+            <li class="duration-300 transition-all active:scale-105">
+              <a href="#Features">Features</a>
+            </li>
+            <li class="duration-300 transition-all active:scale-105">
+              <a href="#Pricing">Pricing</a>
+            </li>
+            <li class="duration-300 transition-all active:scale-105">
+              <a href="#Reviews">Reviews</a>
+            </li>
+          </ul>
+        </nav>
 
-            <!-- nav links -->
-            <ul class="flex justify-center items-center gap-7">
-              <li class="duration-300 transition-all active:scale-105">
-                <a href="#HowItWork" class="text-sm">How it Work</a>
-              </li>
-              <li class="duration-300 transition-all active:scale-105">
-                <a href="#Features">Features</a>
-              </li>
-              <li class="duration-300 transition-all active:scale-105">
-                <a href="#Pricing">Pricing</a>
-              </li>
-              <li class="duration-300 transition-all active:scale-105">
-                <a href="#Reviews">Reviews</a>
-              </li>
-            </ul>
-          </nav>
+        <div class="md:hidden">
+          <!-- menu icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5 text-primary">
+            <path fill-rule="evenodd"
+              d="M2 4.75A.75.75 0 0 1 2.75 4h14.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 4.75ZM2 10a.75.75 0 0 1 .75-.75h14.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 10Zm0 5.25a.75.75 0 0 1 .75-.75h14.5a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1-.75-.75Z"
+              clip-rule="evenodd" />
+          </svg>
+        </div>
 
-          <div class="md:hidden">
-            <!-- menu icon -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              class="size-5 text-primary"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M2 4.75A.75.75 0 0 1 2.75 4h14.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 4.75ZM2 10a.75.75 0 0 1 .75-.75h14.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 10Zm0 5.25a.75.75 0 0 1 .75-.75h14.5a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1-.75-.75Z"
-                clip-rule="evenodd"
-              />
+        <!-- header part 02 -->
+        <div class="flex  justify-center items-center gap-4 text-primary">
+          <button
+            class="hidden xs:flex px-5 py-2  hover:bg-linear-to-r hover:from-transparent hover:via-primary/30 hover:to-transparent py-2 hover:bg-white/10 duration-300 transition-all active:scale-105 rounded-4xl text-white">
+            Sign in
+          </button>
+          <button
+            class=" px-5 py-2 bg-primary text-black rounded-4xl font-semibold duration-300 transition-all active:scale-105">
+            Start Tracking
+          </button>
+        </div>
+      </header>
+
+      <!-- content -->
+      <div class="grid grid-cols-1 md:grid-cols-2 min-h-[80vh] mt-15 mb-5">
+        <!-- left content -->
+        <div class="flex flex-col md:justify-between">
+          <div class="flex flex-col gap-2">
+            <h2 class="text-6xl font-semibold text-primary">
+              Your health,
+              <br />
+              finally legible
+            </h2>
+            <div class="flex mt-4 gap-4 flex-wrap">
+              <button
+                class="px-5 py-2 text-nowrap bg-primary text-black rounded-4xl font-semibold duration-300 transition-all active:scale-105">
+                Start Tracking Now
+              </button>
+              <button
+                class=" px-5 bg-linear-to-r from-transparent via-primary/30 to-transparent py-2 bg-white/10 duration-300 transition-all active:scale-105 rounded-4xl text-white">
+                Watch a Demo
+              </button>
+
+            </div>
+          </div>
+
+          <div class="mt-4 sm:mt-0">
+            <p class="text-primary/95 w-80">
+              Vela turns your biomarkers, sleep, and activity into one clear
+              picture so you stop guessing and start acting.
+            </p>
+          </div>
+        </div>
+
+        <!-- right content -->
+        <div class="flex flex-col justify-end md:items-end">
+          <div class="p-2 bg-white/10 mt-2 sm:mt-0 w-auto xs:w-80 rounded-2xl text-white">
+            <div>
+              <img src="imgs/hero/secondary.png" class="w-100 h-18 rounded-2xl object-cover" alt="" />
+            </div>
+            <div class="mt-4">
+              <h4>Track 100+ Biomarkers</h4>
+              <div class="flex gap-2 items-center">
+                <p class="text-white/80">See what we measure</p>
+                <button class="duration-300 transition-all active:scale-105">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-3 font-semibold text-primary">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- SUPPORTS -->
+  <section class="min-h-[20vh]">
+    <div class="max-w-7xl mx-auto px-6 sm:px-15 py-2 sm:py-4">
+      <div class="flex justify-center items-center flex-col gap-4 py-7 sm:py-14">
+        <!-- trust  -->
+        <div>
+          <p class="font-semiboldtext-secondary">
+            Trusted by health-conscious humans across 40+ countries
+          </p>
+        </div>
+
+        <!-- companies names -->
+        <div
+          class="flex mt-5 w-100 justify-center items-center gap-6 text-gray text-xl sm:text-3xl flex-wrap  w-full flex-row">
+          <div>
+            <svg width="2rem" height="2rem" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1.3294 19L0.731323 17.9641L5.06145 15.4641L7.1029 19H1.3294Z" fill="#9ca3af" />
+              <path d="M15.1858 19H9.4123L5.7935 12.7321L10.1236 10.2321L15.1858 19Z" fill="#9ca3af" />
+              <path d="M23.2687 19H17.4952L10.8557 7.5L15.1858 5L23.2687 19Z" fill="#9ca3af" />
             </svg>
           </div>
 
-          <!-- header part 02 -->
-          <div class="flex  justify-center items-center gap-4 text-primary">
-            <button
-              class="hidden xs:flex px-5 py-2  hover:bg-linear-to-r hover:from-transparent hover:via-primary/30 hover:to-transparent py-2 hover:bg-white/10 duration-300 transition-all active:scale-105 rounded-4xl text-white"
-            >
-              Sign in
-            </button>
-            <button
-              class=" px-5 py-2 bg-primary text-black rounded-4xl font-semibold duration-300 transition-all active:scale-105"
-            >
-              Start Tracking
-            </button>
+          <div>
+            <p>peloton</p>
           </div>
-        </header>
+          <div>
+            <svg width="2rem" height="2rem" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 4H11.5V11.5H4V4ZM12.5 4H20V11.5H12.5V4ZM4 12.5H11.5V20H4V12.5ZM12.5 12.5H20V20H12.5V12.5Z"
+                fill="#9ca3af" />
+            </svg>
+          </div>
 
-        <!-- content -->
-        <!-- h-170 sm:h-110 -->
-        <div class="grid grid-cols-1 md:grid-cols-2 min-h-[80vh] mt-15 mb-5">
-          <!-- left content -->
-          <div class="flex flex-col md:justify-between">
-            <div class="flex flex-col gap-2">
-              <h2 class="text-6xl font-semibold text-primary">
-                Your health,
-                <br />
-                finally legible
-              </h2>
-              <div class="flex mt-4 gap-4 flex-wrap">
-                <button
-                  class="px-5 py-2 text-nowrap bg-primary text-black rounded-4xl font-semibold duration-300 transition-all active:scale-105"
-                >
-                  Start Tracking Now
-                </button>
-              <button class=" px-5 bg-linear-to-r from-transparent via-primary/30 to-transparent py-2 bg-white/10 duration-300 transition-all active:scale-105 rounded-4xl text-white">
-              Watch a Demo
-                </button>
+          <div>
+            <p>Fitbit</p>
+          </div>
+          <div>
+            <p>WHOOP</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-              </div>
-            </div>
+  <!-- HOW IT WORKS -->
+  <section id="HowItWork" class="h-auto bg-[#F6F6F6]">
+    <div class="max-w-7xl mx-auto px-6 sm:px-15 py-2 sm:py-4 ">
+      <div class="flex justify-center items-center flex-col gap-7 sm:gap-14 py-7 sm:py-14   ">
+        <!-- header -->
+        <div class="flex flex-col justify-center items-center gap-2   w-full">
+          <h6 class="text-accent text-sm font-semibold">HOW IT WORKS</h6>
+          <div class="text-center">
+            <h2 class="text-4xl font-semibold">Scattered to seen,</h2>
+            <h2 class="text-4xl font-semibold ">in three steps</h2>
+          </div>
 
-            <div class="mt-4 sm:mt-0">
-              <p class="text-primary/95 w-80">
-                Vela turns your biomarkers, sleep, and activity into one clear
-                picture so you stop guessing and start acting.
+
+        </div>
+
+        <!-- card of steps -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 items-center justify-center min-h-100">
+          <!-- step 1  -->
+          <div class="space-y-4">
+            <img src="imgs/steps/01.png" alt="" class="rounded-xl  aspect-square" />
+
+            <div class="space-y-2">
+              <h4 class="font-semibold">Connect everything</h4>
+              <p class="text-gray">
+                Sync your wearables and upload past lab results in seconds.
+                One tap, no spreadsheets.
               </p>
             </div>
           </div>
 
-          <!-- right content -->
-          <div class="flex flex-col justify-end md:items-end">
-            <div
-              class="p-2 bg-white/10 mt-2 sm:mt-0 w-auto xs:w-80 rounded-2xl text-white"
-            >
-              <div>
-                <img
-                  src="imgs/hero/secondary.png"
-                  class="w-100 h-18 rounded-2xl object-cover"
-                  alt=""
-                />
-              </div>
-              <div class="mt-4">
-                <h4>Track 100+ Biomarkers</h4>
-                <div class="flex gap-2 items-center">
-                  <p class="text-white/80">See what we measure</p>
-                  <button class="duration-300 transition-all active:scale-105">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="currentColor"
-                      class="size-3 font-semibold text-primary"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="m8.25 4.5 7.5 7.5-7.5 7.5"
-                      />
-                    </svg>
-                  </button>
-                </div>
-              </div>
+          <!-- step 2  -->
+          <div class="space-y-4">
+            <img src="imgs/steps/02.png" alt="" class="rounded-xl aspect-square" />
+            <div class="space-y-2">
+              <h4 class="font-semibold">Connect everything</h4>
+              <p class="text-gray">
+                Sync your wearables and upload past lab results in seconds.
+                One tap, no spreadsheets.
+              </p>
+            </div>
+          </div>
+
+          <!-- step 3 -->
+          <div class="space-y-4">
+            <img src="imgs/steps/03.png" alt="" class="rounded-xl  aspect-square" />
+            <div class="space-y-2">
+              <h4 class="font-semibold">Connect everything</h4>
+              <p class="text-gray">
+                Sync your wearables and upload past lab results in seconds.
+                One tap, no spreadsheets.
+              </p>
             </div>
           </div>
         </div>
       </div>
-    </main>
+    </div>
+  </section>
 
-    <!-- SUPPORTS -->
-    <section class="min-h-[20vh]">
-      <div class="max-w-7xl mx-auto px-6 sm:px-15 py-2 sm:py-4">
-        <div
-          class="flex justify-center items-center flex-col gap-4 py-7 sm:py-14"
-        >
-          <!-- trust  -->
-          <div>
-            <p class="font-semiboldtext-secondary">
-              Trusted by health-conscious humans across 40+ countries
-            </p>
-          </div>
-
-          <!-- companies names -->
-          <div
-            class="flex mt-5 w-100 justify-center items-center gap-6 text-gray text-xl sm:text-3xl flex-wrap  w-full flex-row"
-          >
-            <div>
-              <svg
-                width="2rem"
-                height="2rem"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M1.3294 19L0.731323 17.9641L5.06145 15.4641L7.1029 19H1.3294Z"
-                  fill="#9ca3af"
-                />
-                <path
-                  d="M15.1858 19H9.4123L5.7935 12.7321L10.1236 10.2321L15.1858 19Z"
-                  fill="#9ca3af"
-                />
-                <path
-                  d="M23.2687 19H17.4952L10.8557 7.5L15.1858 5L23.2687 19Z"
-                  fill="#9ca3af"
-                />
-              </svg>
-            </div>
-
-            <div>
-              <p>peloton</p>
-            </div>
-            <div>
-              <svg
-                width="2rem"
-                height="2rem"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M4 4H11.5V11.5H4V4ZM12.5 4H20V11.5H12.5V4ZM4 12.5H11.5V20H4V12.5ZM12.5 12.5H20V20H12.5V12.5Z"
-                  fill="#9ca3af"
-                />
-              </svg>
-            </div>
-
-            <div>
-              <p>Fitbit</p>
-            </div>
-            <div>
-              <p>WHOOP</p>
-            </div>
+  <!-- FEATURES -->
+  <section id="Features" class=" h-auto">
+    <div class="max-w-7xl mx-auto px-6 sm:px-15 py-2 sm:py-4">
+      <div class="grid grid-rows-[1fr_auto] gap-y-7 sm:gap-14 py-7 sm:py-14 ">
+        <!-- header -->
+        <div class="grid md:grid-cols-[0.5fr_2fr_0.5fr] h-fit gap-2 row-span-1">
+          <div class="md:col-start-2 md:pl-4">
+            <h6 class="text-accent text-sm font-semibold">CORE FEATURES</h6>
+            <h2 class="text-4xl font-semibold">The signals that matter,</h2>
+            <h2 class="text-4xl font-semibold">without the noise.</h2>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- HOW IT WORKS -->
-    <section id="HowItWork" class="h-auto bg-[#F6F6F6]">
-      <div class="max-w-7xl mx-auto px-6 sm:px-15 py-2 sm:py-4 ">
-        <div
-          class="flex justify-center items-center flex-col gap-7 sm:gap-14 py-7 sm:py-14   "
-        >
-          <!-- header -->
-          <div class="flex flex-col justify-center items-center gap-2   w-full">
-            <h6 class="text-accent text-sm font-semibold">HOW IT WORKS</h6>
-            <h2 class="text-4xl font-semibold">Scattered to seen,</h2>
-            <h2 class="text-4xl font-semibold">in three steps</h2>
+        <!-- content of feature -->
+        <div class="  py-2 w-full  grid grid-cols-1 md:grid-cols-[auto_1fr]
+            lg:grid-cols-[0.5fr_2fr_1fr] gap-4 md:gap-x-10 items-center justify-center">
+          <!-- side bar  -->
+          <div class="flex  space-y-4 h-full w-full   ">
+            <ul class="flex items-center justify-center md:block overflow-x-scroll">
+              <li class="border-l-2 border-accent px-2 py-1 ">
+                <button class="p-2">Connect</button>
+              </li>
+              <li class="px-2 py-1 ">
+                <button class="p-2">See</button>
+              </li>
+              <li class="px-2 py-1">
+                <button class="p-2">Act</button>
+              </li>
+              <li class="px-2 py-1">
+                <button class="p-2">Ask</button>
+              </li>
+            </ul>
           </div>
 
-          <!-- card of steps -->
-          <div
-            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 items-center justify-center min-h-100"
-          >
-            <!-- step 1  -->
-            <div class="space-y-4">
-              <img
-                src="imgs/steps/01.png"
-                alt=""
-                class="rounded-xl  aspect-square"
-              />
-
-              <div class="space-y-2">
-                <h4 class="font-semibold">Connect everything</h4>
-                <p class="text-gray">
-                  Sync your wearables and upload past lab results in seconds.
-                  One tap, no spreadsheets.
-                </p>
-              </div>
-            </div>
-
-            <!-- step 2  -->
-            <div class="space-y-4">
-              <img
-                src="imgs/steps/02.png"
-                alt=""
-                class="rounded-xl aspect-square"
-              />
-              <div class="space-y-2">
-                <h4 class="font-semibold">Connect everything</h4>
-                <p class="text-gray">
-                  Sync your wearables and upload past lab results in seconds.
-                  One tap, no spreadsheets.
-                </p>
-              </div>
-            </div>
-
-            <!-- step 3 -->
-            <div class="space-y-4">
-              <img
-                src="imgs/steps/03.png"
-                alt=""
-                class="rounded-xl  aspect-square"
-              />
-              <div class="space-y-2">
-                <h4 class="font-semibold">Connect everything</h4>
-                <p class="text-gray">
-                  Sync your wearables and upload past lab results in seconds.
-                  One tap, no spreadsheets.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FEATURES -->
-    <section id="Features" class=" h-auto">
-      <div class="max-w-7xl mx-auto px-6 sm:px-15 py-2 sm:py-4">
-        <div class="grid grid-rows-[1fr_auto] gap-y-7 sm:gap-14 py-7 sm:py-14 ">
-          <!-- header -->
-          <div class="grid md:grid-cols-[0.5fr_2fr_0.5fr] h-fit gap-2 row-span-1">
-            <div class="md:col-start-2 md:pl-4">
-              <h6 class="text-accent text-sm font-semibold">CORE FEATURES</h6>
-              <h2 class="text-4xl font-semibold">The signals that matter,</h2>
-              <h2 class="text-4xl font-semibold">without the noise.</h2>
-            </div>
+          <!-- image content -->
+          <div class="space-y-4 h-full w-full   ">
+            <img src="imgs/features/connect.png" alt="" class="rounded-xl w-full h-full" />
           </div>
 
-          <!-- content of feature -->
-          <div
-            class="  py-2 w-full  grid grid-cols-1 md:grid-cols-[auto_1fr]
-            lg:grid-cols-[0.5fr_2fr_1fr] gap-4 md:gap-x-10 items-center justify-center"
-          >
-            <!-- side bar  -->
-            <div class="flex  space-y-4 h-full w-full   ">
-              <ul class="flex items-center justify-center md:block overflow-x-scroll">
-                <li class="border-l-2 border-accent px-2 py-1 ">
-                  <button class="p-2">Connect</button>
-                </li>
-                <li class="px-2 py-1 ">
-                  <button class="p-2">See</button>
-                </li>
-                <li class="px-2 py-1">
-                  <button class="p-2">Act</button>
-                </li>
-                <li class="px-2 py-1">
-                  <button class="p-2">Ask</button>
-                </li>
-              </ul>
+          <!-- explanations -->
+          <div class="space-y-4 md:space-y-8 h-full w-full md:col-span-2 lg:col-span-1 ">
+            <div class="space-y-2 md:space-y-4">
+              <h4 class="font-semibold text-2xl">
+                Every wearable, every <br />
+                lab synced live.
+              </h4>
+              <p class="text-gray text-xs font-medium">
+                No CSV exports, no manual entries, no reconciling
+                spreadsheets. Vela pulls from Apple Health, Oura, Whoop,
+                Garmin, and 40+ partners — and keeps every reading in sync,
+                every minute of the day.
+              </p>
             </div>
-
-            <!-- image content -->
-            <div class="space-y-4 h-full w-full   ">
-              <img
-                src="imgs/features/connect.png"
-                alt=""
-                class="rounded-xl w-full h-full"
-              />
-            </div>
-
-            <!-- explanations -->
-            <div class="space-y-4 md:space-y-8 h-full w-full md:col-span-2 lg:col-span-1 ">
-              <div class="space-y-2 md:space-y-4">
-                <h4 class="font-semibold text-2xl">
-                  Every wearable, every <br />
-                  lab synced live.
-                </h4>
-                <p class="text-gray text-xs font-medium">
-                  No CSV exports, no manual entries, no reconciling
-                  spreadsheets. Vela pulls from Apple Health, Oura, Whoop,
-                  Garmin, and 40+ partners — and keeps every reading in sync,
-                  every minute of the day.
-                </p>
-              </div>
-              <div>
-                <button
-                  class="px-5 py-2 bg-secondary duration-300 transition-all active:scale-105 rounded-4xl text-white"
-                >
-                  Learn more
-                </button>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- REVIEWS -->
-    <section id="Reviews" class="h-auto ">
-      <div class="max-w-7xl mx-auto px-6 sm:px-15 py-2 sm:py-4">
-        <!-- md:min-w-3xl" -->
-        <div class="flex flex-col gap-2 py-7 sm:py-14 ">
-          <!-- header -->
-          <div
-            class="flex flex-col md:flex-row  md:justify-between gap-4   py-6 md:py-10 lg:py-14"
-          >
-            <div class="space-y-2 ">
-              <h6 class="text-accent text-sm font-semibold">REVIEWS</h6>
-              <h2 class="text-4xl font-semibold">People who finally get it</h2>
-            </div>
-
-            <div class=" md:self-end ">
+            <div>
               <button
-                class="px-5 py-2 bg-secondary duration-300 transition-all active:scale-105 rounded-4xl text-white"
-              >
-                View more
+                class="px-5 py-2 bg-secondary duration-300 transition-all active:scale-105 rounded-4xl text-white">
+                Learn more
               </button>
             </div>
           </div>
+        </div>
 
-          <!-- cards of reviews  (carousel)  -->
-          <div
-            class="grid  grid-cols-[100%_100%_100%] md:grid-cols-[60%_60%_60%] gap-4 max-h-100 sm:min-w-100 overflow-y-scroll sm:overflow-x-scroll"
-          >
-            <!-- card review 01 -->
-            <div class="relative ">
-              <img
-                src="imgs/reviews/01.jpg"
-                alt=""
-                class="rounded-2xl h-100 w-full object-cover"
-              />
+      </div>
+    </div>
+  </section>
 
-              <div class="absolute p-4 sm:p-8 inset-0 flex justify-between flex-col">
-                <h4 class="text-primary font-semibold text-md w-auto">
-                  I stopped using four different health apps and consolidated
-                  into Vela. My morning routine is now one tab instead of seven.
-                </h4>
-                <div>
-                  <p class="text-primary">Daniel Reyes</p>
-                  <p class="text-gray">28, Austin</p>
-                </div>
-              </div>
-
-            </div>
-
-            <!-- card review 02 -->
-            <div class="relative  ">
-              <img
-                src="imgs/reviews/02.jfif"
-                alt=""
-                class="rounded-2xl h-100 w-full object-cover"
-              />
-              <div class="absolute p-8 inset-0 flex justify-between flex-col">
-                <h4 class="text-primary font-semibold text-md w-auto">
-                  My doctor said my labs were 'fine.' Vela cross-referenced
-                  three markers and fla a thyroid issue that had been missed fo
-                  years
-                </h4>
-                <div>
-                  <p class="text-primary">Aisha Patel</p>
-                  <p class="text-gray">32, London</p>
-                </div>
-              </div>
-            </div>
-
-            <!-- card review 03-->
-            <div class="relative ">
-              <img
-                src="imgs/reviews/03.jfif"
-                alt=""
-                class="rounded-2xl h-100  w-full object-cover"
-              />
-              <div class="absolute p-8 inset-0 flex justify-between flex-col">
-                <h4 class="text-primary font-semibold text-md w-auto">
-                  Vela helped me track my sleep and recovery patterns better
-                  than any wearable. I finally have clear insights without
-                  sorting through endless raw data
-                </h4>
-                <div>
-                  <p class="text-primary">Lucas Chen</p>
-                  <p class="text-gray">29, San Francisco</p>
-                </div>
-              </div>
-            </div>
+  <!-- REVIEWS -->
+  <section id="Reviews" class="h-auto ">
+    <div class="max-w-7xl mx-auto px-6 sm:px-15 py-2 sm:py-4">
+      
+      <div class="flex flex-col gap-2 py-7 sm:py-14 ">
+        <!-- header -->
+        <div class="flex flex-col md:flex-row  md:justify-between gap-4   py-6 md:py-10 lg:py-14">
+          <div class="space-y-2 ">
+            <h6 class="text-accent text-sm font-semibold">REVIEWS</h6>
+            <h2 class="text-4xl font-semibold">People who finally get it</h2>
           </div>
 
-          <!-- controller -->
-          <div class="flex gap-4 items-center mt-6">
-            <button
-              class="bg-gray/10 p-2 rounded-full text-center transition-all duration-300 active:scale-105"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                class="size-6"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M7.72 12.53a.75.75 0 0 1 0-1.06l7.5-7.5a.75.75 0 1 1 1.06 1.06L9.31 12l6.97 6.97a.75.75 0 1 1-1.06 1.06l-7.5-7.5Z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-            </button>
-            <div class="flex gap-2">
-              <div class="size-2 rounded-full bg-secondary"></div>
-              <div class="size-2 rounded-full bg-gray/30"></div>
-              <div class="size-2 rounded-full bg-gray/30"></div>
-            </div>
-            <button
-              class="bg-gray/10 p-2 rounded-full text-center transition-all duration-300 active:scale-105"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="currentColor"
-                class="size-6"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
-                  clip-rule="evenodd"
-                />
-              </svg>
+          <div class=" md:self-end ">
+            <button class="px-5 py-2 bg-secondary duration-300 transition-all active:scale-105 rounded-4xl text-white">
+              View more
             </button>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- PRICING -->
-    <section id="Pricing" class="h-auto bg-[#F6F6F6]">
-      <div class="max-w-7xl mx-auto px-6 sm:px-15 py-2 sm:py-4">
+        <!-- cards of reviews  (carousel)  -->
         <div
-          class="flex  justify-center items-center flex-col  gap-7 sm:gap-14 py-7 sm:py-14"
-        >
-          <!-- header of pricing -->
-          <div class="flex flex-col  w-full sm:justify-center sm:items-center gap-2
+          class="grid  grid-cols-[100%_100%_100%] md:grid-cols-[60%_60%_60%] gap-4 max-h-100 sm:min-w-100 overflow-y-scroll sm:overflow-x-scroll">
+          <!-- card review 01 -->
+          <div class="relative ">
+            <img src="imgs/reviews/01.jpg" alt="" class="rounded-2xl h-100 w-full object-cover" />
+
+            <div class="absolute p-4 sm:p-8 inset-0 flex justify-between flex-col">
+              <h4 class="text-primary font-semibold text-md w-auto">
+                I stopped using four different health apps and consolidated
+                into Vela. My morning routine is now one tab instead of seven.
+              </h4>
+              <div>
+                <p class="text-primary">Daniel Reyes</p>
+                <p class="text-gray">28, Austin</p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- card review 02 -->
+          <div class="relative  ">
+            <img src="imgs/reviews/02.jfif" alt="" class="rounded-2xl h-100 w-full object-cover" />
+            <div class="absolute p-8 inset-0 flex justify-between flex-col">
+              <h4 class="text-primary font-semibold text-md w-auto">
+                My doctor said my labs were 'fine.' Vela cross-referenced
+                three markers and fla a thyroid issue that had been missed fo
+                years
+              </h4>
+              <div>
+                <p class="text-primary">Aisha Patel</p>
+                <p class="text-gray">32, London</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- card review 03-->
+          <div class="relative ">
+            <img src="imgs/reviews/03.jfif" alt="" class="rounded-2xl h-100  w-full object-cover" />
+            <div class="absolute p-8 inset-0 flex justify-between flex-col">
+              <h4 class="text-primary font-semibold text-md w-auto">
+                Vela helped me track my sleep and recovery patterns better
+                than any wearable. I finally have clear insights without
+                sorting through endless raw data
+              </h4>
+              <div>
+                <p class="text-primary">Lucas Chen</p>
+                <p class="text-gray">29, San Francisco</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- controller -->
+        <div class="flex gap-4 items-center mt-6">
+          <button class="bg-gray/10 p-2 rounded-full text-center transition-all duration-300 active:scale-105">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+              <path fill-rule="evenodd"
+                d="M7.72 12.53a.75.75 0 0 1 0-1.06l7.5-7.5a.75.75 0 1 1 1.06 1.06L9.31 12l6.97 6.97a.75.75 0 1 1-1.06 1.06l-7.5-7.5Z"
+                clip-rule="evenodd" />
+            </svg>
+          </button>
+          <div class="flex gap-2">
+            <div class="size-2 rounded-full bg-secondary"></div>
+            <div class="size-2 rounded-full bg-gray/30"></div>
+            <div class="size-2 rounded-full bg-gray/30"></div>
+          </div>
+          <button class="bg-gray/10 p-2 rounded-full text-center transition-all duration-300 active:scale-105">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+              <path fill-rule="evenodd"
+                d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
+                clip-rule="evenodd" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section id="Pricing" class="h-auto bg-[#F6F6F6]">
+    <div class="max-w-7xl mx-auto px-6 sm:px-15 py-2 sm:py-4">
+      <div class="flex  justify-center items-center flex-col  gap-7 sm:gap-14 py-7 sm:py-14">
+        <!-- header of pricing -->
+        <div class="flex flex-col  w-full sm:justify-center sm:items-center gap-2
           ">
-            <h6 class="text-accent text-sm font-semibold">PRICING</h6>
-            <h2 class="text-4xl font-semibold">Two plans,
-              <h2 class="text-4xl font-semibold">No surprises</h2>
-            </h2>
-            
-            <p class="text-gray leading-4 mt-2">
-              Start with a free 14-day trial — no credit card required.
-                          <p class="text-gray leading-4">
-              Cancel anytime, no questions asked.
-            </p>
-            </p>
-          </div>
+          <h6 class="text-accent text-sm font-semibold">PRICING</h6>
+          <h2 class="text-4xl font-semibold">Two plans,
+            <h2 class="text-4xl font-semibold">No surprises</h2>
+          </h2>
 
-          <!-- plans of pricing -->
-           <!-- flex flex-col md:flex-row  gap-4  flex-wrap sm:justify-center sm:items-center w-full -->
-          <div
-            class="grid grid-cols-1 lg:grid-cols-[1fr_1fr] w-full sm:w-auto gap-4"
-          >
-            <!-- plan 1  -->
-         <div class="bg-linear-to-br   from-accent/80 via-transparent to-accent/80 p-[0.1rem] rounded-xl">
-             <div class="p-4  bg-primary sm:w-100  h-auto rounded-xl">
+          <p class="text-gray leading-4 mt-2">
+            Start with a free 14-day trial — no credit card required.
+          <p class="text-gray leading-4">
+            Cancel anytime, no questions asked.
+          </p>
+          </p>
+        </div>
 
-                <div class="flex  flex-wrap justify-between">
+        <!-- plans of pricing -->
+        <!-- flex flex-col md:flex-row  gap-4  flex-wrap sm:justify-center sm:items-center w-full -->
+        <div class="grid grid-cols-1 lg:grid-cols-[1fr_1fr] w-full sm:w-auto gap-4">
+          <!-- plan 1  -->
+          <div class="bg-linear-to-br   from-accent/80 via-transparent to-accent/80 p-[0.1rem] rounded-xl">
+            <div class="p-4  bg-primary sm:w-100  h-auto rounded-xl">
+
+              <div class="flex  flex-wrap justify-between">
                 <h4 class="font-semibold">Personal</h4>
-                <button class="text-accent font-semibold text-xs bg-accent/10 rounded-2xl py-1 px-2">Most popular</button>
+                <button class="text-accent font-semibold text-xs bg-accent/10 rounded-2xl py-1 px-2">Most
+                  popular</button>
+              </div>
+
+              <div class="flex flex-col  border-gray/20 gap-2 py-6">
+
+                <div class=" w-full flex items-center gap-2 ">
+                  <h2 class="text-3xl font-semibold">$12</h2>
+                  <span class="text-gray">months</span>
                 </div>
 
-                <div class="flex flex-col  border-gray/20 gap-2 py-6">
-
-                  <div class=" w-full flex items-center gap-2 ">
-                    <h2 class="text-3xl font-semibold">$12</h2>
-                     <span class="text-gray">months</span> 
-                  </div>
-
-                  <p class="text-gray font-medium text-xs">Billed annually · $144/year</p>
-                 <button class="px-5 py-2  mt-4 bg-secondary duration-300 transition-all active:scale-105 rounded-4xl text-white">
-                 Start your 14-day trial
+                <p class="text-gray font-medium text-xs">Billed annually · $144/year</p>
+                <button
+                  class="px-5 py-2  mt-4 bg-secondary duration-300 transition-all active:scale-105 rounded-4xl text-white">
+                  Start your 14-day trial
                 </button>
 
-                </div>
+              </div>
 
-                <div class="pt-4 sm:pt-6">
-                  <h4 class="text-xs text-gray">Everything included</h4>
-                  <ul class="py-4 px-2 space-y-4">
-                    <li class="flex gap-1 ">
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4 text-accent">
-  <path fill-rule="evenodd" d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z" clip-rule="evenodd" />
-</svg>
-<span class="text-xs  text-dark/80 font-semibold">Unlimited wearable + lab data sync</span>
-                    </li>
-                                  <li class="flex gap-1 ">
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4 text-accent">
-  <path fill-rule="evenodd" d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z" clip-rule="evenodd" />
-</svg>
-<span class="text-xs  text-dark/80 font-semibold">Pattern detection across all biomarkers</span>
-                    </li>
-                                    <li class="flex gap-1 ">
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4 text-accent">
-  <path fill-rule="evenodd" d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z" clip-rule="evenodd" />
-</svg>
-<span class="text-xs  text-dark/80 font-semibold">Ask Vela — AI with full context</span>
-                    </li>
-                                     <li class="flex gap-1 ">
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4 text-accent">
-  <path fill-rule="evenodd" d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z" clip-rule="evenodd" />
-</svg>
-<span class="text-xs  text-dark/80 font-semibold">14-day trial protocols</span>
-                    </li>
-                                     <li class="flex gap-1 ">
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4 text-accent">
-  <path fill-rule="evenodd" d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z" clip-rule="evenodd" />
-</svg>
-<span class="text-xs  text-dark/80 font-semibold">Past lab uploads (PDF or photo)</span>
-                    </li>
-                                     <li class="flex gap-1 ">
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4 text-accent">
-  <path fill-rule="evenodd" d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z" clip-rule="evenodd" />
-</svg>
-<span class="text-xs  text-dark/80 font-semibold">Care milestone tracker</span>
-                    </li>
-                                     <li class="flex gap-1 ">
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4 text-accent">
-  <path fill-rule="evenodd" d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z" clip-rule="evenodd" />
-</svg>
-<span class="text-xs  text-dark/80 font-semibold">Export everything anytime</span>
-                    </li>
-                  </ul>
+              <div class="pt-4 sm:pt-6">
+                <h4 class="text-xs text-gray">Everything included</h4>
+                <ul class="py-4 px-2 space-y-4">
+                  <li class="flex gap-1 ">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                      class="size-4 text-accent">
+                      <path fill-rule="evenodd"
+                        d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
+                        clip-rule="evenodd" />
+                    </svg>
+                    <span class="text-xs  text-dark/80 font-semibold">Unlimited wearable + lab data sync</span>
+                  </li>
+                  <li class="flex gap-1 ">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                      class="size-4 text-accent">
+                      <path fill-rule="evenodd"
+                        d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
+                        clip-rule="evenodd" />
+                    </svg>
+                    <span class="text-xs  text-dark/80 font-semibold">Pattern detection across all biomarkers</span>
+                  </li>
+                  <li class="flex gap-1 ">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                      class="size-4 text-accent">
+                      <path fill-rule="evenodd"
+                        d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
+                        clip-rule="evenodd" />
+                    </svg>
+                    <span class="text-xs  text-dark/80 font-semibold">Ask Vela — AI with full context</span>
+                  </li>
+                  <li class="flex gap-1 ">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                      class="size-4 text-accent">
+                      <path fill-rule="evenodd"
+                        d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
+                        clip-rule="evenodd" />
+                    </svg>
+                    <span class="text-xs  text-dark/80 font-semibold">14-day trial protocols</span>
+                  </li>
+                  <li class="flex gap-1 ">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                      class="size-4 text-accent">
+                      <path fill-rule="evenodd"
+                        d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
+                        clip-rule="evenodd" />
+                    </svg>
+                    <span class="text-xs  text-dark/80 font-semibold">Past lab uploads (PDF or photo)</span>
+                  </li>
+                  <li class="flex gap-1 ">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                      class="size-4 text-accent">
+                      <path fill-rule="evenodd"
+                        d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
+                        clip-rule="evenodd" />
+                    </svg>
+                    <span class="text-xs  text-dark/80 font-semibold">Care milestone tracker</span>
+                  </li>
+                  <li class="flex gap-1 ">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                      class="size-4 text-accent">
+                      <path fill-rule="evenodd"
+                        d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
+                        clip-rule="evenodd" />
+                    </svg>
+                    <span class="text-xs  text-dark/80 font-semibold">Export everything anytime</span>
+                  </li>
+                </ul>
 
-                </div>
- 
+              </div>
+
             </div>
 
-         </div>
-            <!-- plan 2  -->
-                     <div class="border-[0.1rem]   border-gray/5 rounded-xl">
-             <div class="p-4  bg-primary sm:w-100 h-full  rounded-xl">
-
-                <div >
-                <h4 class="font-semibold">Family</h4>
-                </div>
-
-                <div class="flex flex-col  border-gray/20 gap-2 py-6">
-
-                  <div class=" w-full flex items-center gap-2 ">
-                    <h2 class="text-3xl font-semibold">$24</h2>
-                     <span class="text-gray">months</span> 
-                  </div>
-
-                  <p class="text-gray font-medium text-xs">$288 billed annually · for up to 5 users</p>
-                 <button class="px-5 py-2 mt-4 border border-gray/20  duration-300 transition-all active:scale-105 rounded-4xl text-secondary">
-                 Get started
-                </button>
-
-                </div>
-
-                <div class="pt-4 sm:pt-6">
-                  <h4 class="text-xs text-gray">Everything included</h4>
-                  <ul class="py-4 px-2 space-y-4">
-                    <li class="flex gap-1 ">
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4 text-accent">
-  <path fill-rule="evenodd" d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z" clip-rule="evenodd" />
-</svg>
-<span class="text-xs  text-dark/80 font-semibold">Up to 5 individual member profiles</span>
-                    </li>
-                                  <li class="flex gap-1 ">
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4 text-accent">
-  <path fill-rule="evenodd" d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z" clip-rule="evenodd" />
-</svg>
-<span class="text-xs  text-dark/80 font-semibold">Cross-member pattern insights (opt-in)</span>
-                    </li>
-                                    <li class="flex gap-1 ">
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4 text-accent">
-  <path fill-rule="evenodd" d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z" clip-rule="evenodd" />
-</svg>
-<span class="text-xs  text-dark/80 font-semibold">Shared care calendar & reminders</span>
-                    </li>
-                                     <li class="flex gap-1 ">
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4 text-accent">
-  <path fill-rule="evenodd" d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z" clip-rule="evenodd" />
-</svg>
-<span class="text-xs  text-dark/80 font-semibold">14-day trial protocols</span>
-                    </li>
-                                     <li class="flex gap-1 ">
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4 text-accent">
-  <path fill-rule="evenodd" d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z" clip-rule="evenodd" />
-</svg>
-<span class="text-xs  text-dark/80 font-semibold">Each member controls their own privacy</span>
-                    </li>
-                                     <li class="flex gap-1 ">
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4 text-accent">
-  <path fill-rule="evenodd" d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z" clip-rule="evenodd" />
-</svg>
-<span class="text-xs  text-dark/80 font-semibold">Single household billing</span>
-                    </li>
-
-                  </ul>
-
-                </div>
-
-                
-
- 
-            </div>
-
-         </div>
-
-         
           </div>
+          <!-- plan 2  -->
+          <div class="border-[0.1rem]   border-gray/5 rounded-xl">
+            <div class="p-4  bg-primary sm:w-100 h-full  rounded-xl">
+
+              <div>
+                <h4 class="font-semibold">Family</h4>
+              </div>
+
+              <div class="flex flex-col  border-gray/20 gap-2 py-6">
+
+                <div class=" w-full flex items-center gap-2 ">
+                  <h2 class="text-3xl font-semibold">$24</h2>
+                  <span class="text-gray">months</span>
+                </div>
+
+                <p class="text-gray font-medium text-xs">$288 billed annually · for up to 5 users</p>
+                <button
+                  class="px-5 py-2 mt-4 border border-gray/20  duration-300 transition-all active:scale-105 rounded-4xl text-secondary">
+                  Get started
+                </button>
+
+              </div>
+
+              <div class="pt-4 sm:pt-6">
+                <h4 class="text-xs text-gray">Everything included</h4>
+                <ul class="py-4 px-2 space-y-4">
+                  <li class="flex gap-1 ">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                      class="size-4 text-accent">
+                      <path fill-rule="evenodd"
+                        d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
+                        clip-rule="evenodd" />
+                    </svg>
+                    <span class="text-xs  text-dark/80 font-semibold">Up to 5 individual member profiles</span>
+                  </li>
+                  <li class="flex gap-1 ">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                      class="size-4 text-accent">
+                      <path fill-rule="evenodd"
+                        d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
+                        clip-rule="evenodd" />
+                    </svg>
+                    <span class="text-xs  text-dark/80 font-semibold">Cross-member pattern insights (opt-in)</span>
+                  </li>
+                  <li class="flex gap-1 ">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                      class="size-4 text-accent">
+                      <path fill-rule="evenodd"
+                        d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
+                        clip-rule="evenodd" />
+                    </svg>
+                    <span class="text-xs  text-dark/80 font-semibold">Shared care calendar & reminders</span>
+                  </li>
+                  <li class="flex gap-1 ">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                      class="size-4 text-accent">
+                      <path fill-rule="evenodd"
+                        d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
+                        clip-rule="evenodd" />
+                    </svg>
+                    <span class="text-xs  text-dark/80 font-semibold">14-day trial protocols</span>
+                  </li>
+                  <li class="flex gap-1 ">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                      class="size-4 text-accent">
+                      <path fill-rule="evenodd"
+                        d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
+                        clip-rule="evenodd" />
+                    </svg>
+                    <span class="text-xs  text-dark/80 font-semibold">Each member controls their own privacy</span>
+                  </li>
+                  <li class="flex gap-1 ">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                      class="size-4 text-accent">
+                      <path fill-rule="evenodd"
+                        d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
+                        clip-rule="evenodd" />
+                    </svg>
+                    <span class="text-xs  text-dark/80 font-semibold">Single household billing</span>
+                  </li>
+
+                </ul>
+
+              </div>
+
+
+
+
+            </div>
+
+          </div>
+
+
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- FAQ -->
-      <section  class="h-auto">
-      <div class="max-w-7xl mx-auto px-6 sm:px-15 py-2 sm:py-4">
-        <div
-          class="grid grid-cols-1 md:grid-cols-2 items-center justify-between
-          py-7 sm:py-14 gap-4 "
-        >
-          <!-- header of faq -->
-          <div class="flex flex-col  gap-4 sm:gap-8  h-full ">
-            <div class="space-y-2">
-              <h6 class="text-accent text-sm font-semibold">FAQ</h6>
+  <!-- FAQ -->
+  <section class="h-auto">
+    <div class="max-w-7xl mx-auto px-6 sm:px-15 py-2 sm:py-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 items-center justify-between
+          py-7 sm:py-14 gap-4 ">
+        <!-- header of faq -->
+        <div class="flex flex-col  gap-4 sm:gap-8  h-full ">
+          <div class="space-y-2">
+            <h6 class="text-accent text-sm font-semibold">FAQ</h6>
             <h2 class="text-4xl font-semibold">
               Common questions
             </h2>
-            </div>
-            <button class="px-5 py-2 w-fit bg-secondary duration-300 transition-all active:scale-105 rounded-4xl text-white">
-              Ask your Questions
+          </div>
+          <button
+            class="px-5 py-2 w-fit bg-secondary duration-300 transition-all active:scale-105 rounded-4xl text-white">
+            Ask your Questions
+          </button>
+
+        </div>
+
+        <!-- Questions -->
+        <div class="flex flex-col  h-full ">
+
+          <!-- Q1 -->
+          <div class="py-4 sm:py-6 border-b-1 border-gray/10">
+            <div class="flex justify-between">
+              <h4 class="font-semibold">What do I need to use Vela?</h4>
+              <button onclick="p.classList.toggle('hidden')"
+                class="flex justify-center items-center size-6 text-xs transition-all duration-300 active:scale-105  rounded-full hover:bg-gray/10">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                  class="size-4 text-gray">
+                  <path fill-rule="evenodd"
+                    d="M12 3.75a.75.75 0 0 1 .75.75v6.75h6.75a.75.75 0 0 1 0 1.5h-6.75v6.75a.75.75 0 0 1-1.5 0v-6.75H4.5a.75.75 0 0 1 0-1.5h6.75V4.5a.75.75 0 0 1 .75-.75Z"
+                    clip-rule="evenodd" />
+                </svg>
               </button>
-           
+
+
+
+            </div>
+            <div id="p" class="hidden pt-4  transition-all duration-300 ease-linear">
+
+              <p class="text-gray font-medium  text-xs ">
+                Just one thing: any health data source you already have. That includes Apple Health, Google Fit, Oura,
+                Whoop, Garmin, Fitbit, and 40+ others. If you've ever uploaded a blood panel, we'll read that too.
+              </p>
+
+            </div>
           </div>
 
-          <!-- Questions -->
-          <div class="flex flex-col  h-full ">
+          <!-- Q2 -->
+          <div class="py-4 sm:py-6 border-b-1 border-gray/10">
 
-            <!-- Q1 -->
-             <div class="py-4 sm:py-6 border-b-1 border-gray/10">
-              <div class="flex justify-between">
-                  <h4 class="font-semibold">What do I need to use Vela?</h4>
-                  <button onclick="p.classList.toggle('hidden')" class="flex justify-center items-center size-6 text-xs transition-all duration-300 active:scale-105  rounded-full hover:bg-gray/10">
-                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4 text-gray">
-                        <path fill-rule="evenodd" d="M12 3.75a.75.75 0 0 1 .75.75v6.75h6.75a.75.75 0 0 1 0 1.5h-6.75v6.75a.75.75 0 0 1-1.5 0v-6.75H4.5a.75.75 0 0 1 0-1.5h6.75V4.5a.75.75 0 0 1 .75-.75Z" clip-rule="evenodd" />
-                      </svg>
-                  </button>
-
-
-
-              </div>
-              <div id="p"  class="hidden pt-4  transition-all duration-300 ease-linear">
-
-   <p class="text-gray font-medium  text-xs ">
-    Just one thing: any health data source you already have. That includes Apple Health, Google Fit, Oura, Whoop, Garmin, Fitbit, and 40+ others. If you've ever uploaded a blood panel, we'll read that too.
-  </p>
-
-              </div>
-             </div>
-
-                 <!-- Q2 -->
-             <div class="py-4 sm:py-6 border-b-1 border-gray/10">
-              
-              <div class="flex justify-between">
-                  <h4 class="font-semibold">How long until Vela starts surfacing patterns?</h4>
-                  <button class="flex justify-center items-center size-6 text-xs transition-all duration-300 active:scale-105  rounded-full hover:bg-gray/10">
-                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4 text-gray">
-                        <path fill-rule="evenodd" d="M12 3.75a.75.75 0 0 1 .75.75v6.75h6.75a.75.75 0 0 1 0 1.5h-6.75v6.75a.75.75 0 0 1-1.5 0v-6.75H4.5a.75.75 0 0 1 0-1.5h6.75V4.5a.75.75 0 0 1 .75-.75Z" clip-rule="evenodd" />
-                      </svg>
-                  </button>
-              </div>
-              <p class="t
-              ext-gray font-medium hidden text-xs">Just one thing: any health data source you already have. That includes Apple Health, Google Fit, Oura, Whoop, Garmin, Fitbit, and 40+ others. If you've ever uploaded a blood panel, we'll read that too.</p>
-             </div>
-
-
-             <!-- Q3 -->
-             <div class="py-4 sm:py-6 border-b-1 border-gray/10">
-              
-              <div class="flex justify-between">
-                  <h4 class="font-semibold">Do I need a doctor's referral?</h4>
-                  <button class="flex justify-center items-center size-6 text-xs transition-all duration-300 active:scale-105  rounded-full hover:bg-gray/10">
-                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4 text-gray">
-                        <path fill-rule="evenodd" d="M12 3.75a.75.75 0 0 1 .75.75v6.75h6.75a.75.75 0 0 1 0 1.5h-6.75v6.75a.75.75 0 0 1-1.5 0v-6.75H4.5a.75.75 0 0 1 0-1.5h6.75V4.5a.75.75 0 0 1 .75-.75Z" clip-rule="evenodd" />
-                      </svg>
-                  </button>
-              </div>
-              <p class="t
-              ext-gray font-medium hidden text-xs">Just one thing: any health data source you already have. That includes Apple Health, Google Fit, Oura, Whoop, Garmin, Fitbit, and 40+ others. If you've ever uploaded a blood panel, we'll read that too.</p>
-             </div>
-
-             <!-- Q4 -->
-             <div class="py-4 sm:py-6 border-b-1 border-gray/10">
-              
-              <div class="flex justify-between">
-                  <h4 class="font-semibold">Who can see my health data?</h4>
-                  <button class="flex justify-center items-center size-6 text-xs transition-all duration-300 active:scale-105  rounded-full hover:bg-gray/10">
-                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4 text-gray">
-                        <path fill-rule="evenodd" d="M12 3.75a.75.75 0 0 1 .75.75v6.75h6.75a.75.75 0 0 1 0 1.5h-6.75v6.75a.75.75 0 0 1-1.5 0v-6.75H4.5a.75.75 0 0 1 0-1.5h6.75V4.5a.75.75 0 0 1 .75-.75Z" clip-rule="evenodd" />
-                      </svg>
-                  </button>
-              </div>
-              <p class="t
-              ext-gray font-medium hidden text-xs">Just one thing: any health data source you already have. That includes Apple Health, Google Fit, Oura, Whoop, Garmin, Fitbit, and 40+ others. If you've ever uploaded a blood panel, we'll read that too.</p>
-             </div>
-
-                  <!-- Q5 -->
-             <div class="py-4 sm:py-6 border-b-1 border-gray/10">
-              
-              <div class="flex justify-between">
-                  <h4 class="font-semibold">Can I export or delete everything?</h4>
-                  <button class="flex justify-center items-center size-6 text-xs transition-all duration-300 active:scale-105  rounded-full hover:bg-gray/10">
-                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4 text-gray">
-                        <path fill-rule="evenodd" d="M12 3.75a.75.75 0 0 1 .75.75v6.75h6.75a.75.75 0 0 1 0 1.5h-6.75v6.75a.75.75 0 0 1-1.5 0v-6.75H4.5a.75.75 0 0 1 0-1.5h6.75V4.5a.75.75 0 0 1 .75-.75Z" clip-rule="evenodd" />
-                      </svg>
-                  </button>
-              </div>
-              <p class="t
-              ext-gray font-medium hidden text-xs">Just one thing: any health data source you already have. That includes Apple Health, Google Fit, Oura, Whoop, Garmin, Fitbit, and 40+ others. If you've ever uploaded a blood panel, we'll read that too.</p>
-             </div>
-
-
-             <!-- Q6 -->
-             <div class="py-4 sm:py-6 border-b-1 border-gray/10">
-              
-              <div class="flex justify-between">
-                  <h4 class="font-semibold">How is this different from Apple Health or my Oura app?</h4>
-                  <button class="flex justify-center items-center size-6 text-xs transition-all duration-300 active:scale-105  rounded-full hover:bg-gray/10">
-                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4 text-gray">
-                        <path fill-rule="evenodd" d="M12 3.75a.75.75 0 0 1 .75.75v6.75h6.75a.75.75 0 0 1 0 1.5h-6.75v6.75a.75.75 0 0 1-1.5 0v-6.75H4.5a.75.75 0 0 1 0-1.5h6.75V4.5a.75.75 0 0 1 .75-.75Z" clip-rule="evenodd" />
-                      </svg>
-                  </button>
-              </div>
-              <p class="t
-              ext-gray font-medium hidden text-xs">Just one thing: any health data source you already have. That includes Apple Health, Google Fit, Oura, Whoop, Garmin, Fitbit, and 40+ others. If you've ever uploaded a blood panel, we'll read that too.</p>
-             </div>
-
-
-
-          </div>
+            <div class="flex justify-between">
+              <h4 class="font-semibold">How long until Vela starts surfacing patterns?</h4>
+              <button
+                class="flex justify-center items-center size-6 text-xs transition-all duration-300 active:scale-105  rounded-full hover:bg-gray/10">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                  class="size-4 text-gray">
+                  <path fill-rule="evenodd"
+                    d="M12 3.75a.75.75 0 0 1 .75.75v6.75h6.75a.75.75 0 0 1 0 1.5h-6.75v6.75a.75.75 0 0 1-1.5 0v-6.75H4.5a.75.75 0 0 1 0-1.5h6.75V4.5a.75.75 0 0 1 .75-.75Z"
+                    clip-rule="evenodd" />
+                </svg>
+              </button>
+            </div>
+            <p class="t
+              ext-gray font-medium hidden text-xs">Just one thing: any health data source you already have. That
+              includes Apple Health, Google Fit, Oura, Whoop, Garmin, Fitbit, and 40+ others. If you've ever uploaded a
+              blood panel, we'll read that too.</p>
           </div>
 
-       
+
+          <!-- Q3 -->
+          <div class="py-4 sm:py-6 border-b-1 border-gray/10">
+
+            <div class="flex justify-between">
+              <h4 class="font-semibold">Do I need a doctor's referral?</h4>
+              <button
+                class="flex justify-center items-center size-6 text-xs transition-all duration-300 active:scale-105  rounded-full hover:bg-gray/10">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                  class="size-4 text-gray">
+                  <path fill-rule="evenodd"
+                    d="M12 3.75a.75.75 0 0 1 .75.75v6.75h6.75a.75.75 0 0 1 0 1.5h-6.75v6.75a.75.75 0 0 1-1.5 0v-6.75H4.5a.75.75 0 0 1 0-1.5h6.75V4.5a.75.75 0 0 1 .75-.75Z"
+                    clip-rule="evenodd" />
+                </svg>
+              </button>
+            </div>
+            <p class="t
+              ext-gray font-medium hidden text-xs">Just one thing: any health data source you already have. That
+              includes Apple Health, Google Fit, Oura, Whoop, Garmin, Fitbit, and 40+ others. If you've ever uploaded a
+              blood panel, we'll read that too.</p>
+          </div>
+
+          <!-- Q4 -->
+          <div class="py-4 sm:py-6 border-b-1 border-gray/10">
+
+            <div class="flex justify-between">
+              <h4 class="font-semibold">Who can see my health data?</h4>
+              <button
+                class="flex justify-center items-center size-6 text-xs transition-all duration-300 active:scale-105  rounded-full hover:bg-gray/10">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                  class="size-4 text-gray">
+                  <path fill-rule="evenodd"
+                    d="M12 3.75a.75.75 0 0 1 .75.75v6.75h6.75a.75.75 0 0 1 0 1.5h-6.75v6.75a.75.75 0 0 1-1.5 0v-6.75H4.5a.75.75 0 0 1 0-1.5h6.75V4.5a.75.75 0 0 1 .75-.75Z"
+                    clip-rule="evenodd" />
+                </svg>
+              </button>
+            </div>
+            <p class="t
+              ext-gray font-medium hidden text-xs">Just one thing: any health data source you already have. That
+              includes Apple Health, Google Fit, Oura, Whoop, Garmin, Fitbit, and 40+ others. If you've ever uploaded a
+              blood panel, we'll read that too.</p>
+          </div>
+
+          <!-- Q5 -->
+          <div class="py-4 sm:py-6 border-b-1 border-gray/10">
+
+            <div class="flex justify-between">
+              <h4 class="font-semibold">Can I export or delete everything?</h4>
+              <button
+                class="flex justify-center items-center size-6 text-xs transition-all duration-300 active:scale-105  rounded-full hover:bg-gray/10">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                  class="size-4 text-gray">
+                  <path fill-rule="evenodd"
+                    d="M12 3.75a.75.75 0 0 1 .75.75v6.75h6.75a.75.75 0 0 1 0 1.5h-6.75v6.75a.75.75 0 0 1-1.5 0v-6.75H4.5a.75.75 0 0 1 0-1.5h6.75V4.5a.75.75 0 0 1 .75-.75Z"
+                    clip-rule="evenodd" />
+                </svg>
+              </button>
+            </div>
+            <p class="t
+              ext-gray font-medium hidden text-xs">Just one thing: any health data source you already have. That
+              includes Apple Health, Google Fit, Oura, Whoop, Garmin, Fitbit, and 40+ others. If you've ever uploaded a
+              blood panel, we'll read that too.</p>
+          </div>
+
+
+          <!-- Q6 -->
+          <div class="py-4 sm:py-6 border-b-1 border-gray/10">
+
+            <div class="flex justify-between">
+              <h4 class="font-semibold">How is this different from Apple Health or my Oura app?</h4>
+              <button
+                class="flex justify-center items-center size-6 text-xs transition-all duration-300 active:scale-105  rounded-full hover:bg-gray/10">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                  class="size-4 text-gray">
+                  <path fill-rule="evenodd"
+                    d="M12 3.75a.75.75 0 0 1 .75.75v6.75h6.75a.75.75 0 0 1 0 1.5h-6.75v6.75a.75.75 0 0 1-1.5 0v-6.75H4.5a.75.75 0 0 1 0-1.5h6.75V4.5a.75.75 0 0 1 .75-.75Z"
+                    clip-rule="evenodd" />
+                </svg>
+              </button>
+            </div>
+            <p class="t
+              ext-gray font-medium hidden text-xs">Just one thing: any health data source you already have. That
+              includes Apple Health, Google Fit, Oura, Whoop, Garmin, Fitbit, and 40+ others. If you've ever uploaded a
+              blood panel, we'll read that too.</p>
+          </div>
+
+
+
         </div>
       </div>
-    </section>
 
-   <!-- TRACKING NOW -->
-     <section 
-      class="bg-[url(imgs/trackingNow/bg.png)]  bg-cover bg-center  bg-no-repeat   h-screen "
-    >
-      <div class="max-w-7xl mx-auto px-6 sm:px-15 py-4 h-100 ">
-      
 
-        <!-- content -->
-         <div class="flex justify-center items-center gap-8  flex-col py-7 sm:py-14   h-screen  ">
+    </div>
+    </div>
+  </section>
 
-          <div class="space-y-4  text-center">
-           <div class="flex items-center justify-center flex-col">
-             <h2 class="text-5xl font-semibold text-primary"> Ready to read 
+  <!-- TRACKING NOW -->
+  <section class="bg-[url(imgs/trackingNow/bg.png)]  bg-cover bg-center  bg-no-repeat   h-screen ">
+    <div class="max-w-7xl mx-auto px-6 sm:px-15 py-4 h-100 ">
+
+
+      <!-- content -->
+      <div class="flex justify-center items-center gap-8  flex-col py-7 sm:py-14   h-screen  ">
+
+        <div class="space-y-4  text-center">
+          <div class="flex items-center justify-center flex-col">
+            <h2 class="text-5xl font-semibold text-primary"> Ready to read
 
             </h2>
-             <h2 class="text-5xl font-semibold text-primary "> 
+            <h2 class="text-5xl font-semibold text-primary ">
               Your Body
             </h2>
-           </div>
-            <p class="text-primary/80 leading-6">
-              Bring the wearables you already have. Vela does the rest.
-            </p>
-
           </div>
+          <p class="text-primary/80 leading-6">
+            Bring the wearables you already have. Vela does the rest.
+          </p>
 
-          <div class="flex gap-4 flex-col xs:flex-row sm:gap-2 ">
-            <button class="px-5 py-2 w-fit bg-secondary duration-300 transition-all active:scale-105 rounded-4xl text-white">
-              Start Tracking Now
-              </button>
-              <button class=" px-5 bg-linear-to-r from-transparent via-primary/30 to-transparent py-2 bg-white/10 duration-300 transition-all active:scale-105 rounded-4xl text-white">
-             Explore More
-                </button>
+        </div>
 
-          </div>
+        <div class="flex gap-4 flex-col xs:flex-row sm:gap-2 ">
+          <button
+            class="px-5 py-2 w-fit bg-secondary duration-300 transition-all active:scale-105 rounded-4xl text-white">
+            Start Tracking Now
+          </button>
+          <button
+            class=" px-5 bg-linear-to-r from-transparent via-primary/30 to-transparent py-2 bg-white/10 duration-300 transition-all active:scale-105 rounded-4xl text-white">
+            Explore More
+          </button>
 
-         </div>
-       
+        </div>
+
       </div>
-    </section>
 
-    <!-- FOOTER -->
-     <footer class="h-auto bg-[url(imgs/footer/bg.svg)] bg-center bg-no-repeat bg-cover ">
+    </div>
+  </section>
 
-      <div class="max-w-7xl mx-auto px-6 sm:px-15 py-4  h-full">
+  <!-- FOOTER -->
+  <footer class="h-auto bg-[url(imgs/footer/bg.svg)] bg-center bg-no-repeat bg-cover ">
 
-<div class="grid  md:grid-rows-[4fr_auto]   h-full  pt-7 sm:pt-14   ">
-          <!-- top footer -->
+    <div class="max-w-7xl mx-auto px-6 sm:px-15 py-4  h-full">
+
+      <div class="grid  md:grid-rows-[4fr_auto]   h-full  pt-7 sm:pt-14   ">
+        <!-- top footer -->
         <div class="grid grid-cols-1 lg:grid-cols-2 row-span-2  gap-8 lg:gap-0 pb-6   ">
 
           <!-- subscribe -->
 
           <div class=" flex flex-col  space-y-6  ">
 
-           <div class="flex flex-col gap-4">
-             <h2 class="font-semibold text-xl text-primary"> 
-             Vela
-            </h2>
-                        <p class="text-primary/80 leading-6 w-auto sm:w-90">
-              The health dashboard that turns your scattered signals into one clear picture.
-            </p>
-           </div>
+            <div class="flex flex-col gap-4">
+              <h2 class="font-semibold text-xl text-primary">
+                Vela
+              </h2>
+              <p class="text-primary/80 leading-6 w-auto sm:w-90">
+                The health dashboard that turns your scattered signals into one clear picture.
+              </p>
+            </div>
 
-           <form action="" class="flex gap-2 justify-between flex-wrap bg-[#262626]  sm:w-100 py-2 pr-2 pl-4 rounded-4xl
+            <form action="" class="flex gap-2 justify-between flex-wrap bg-[#262626]  sm:w-100 py-2 pr-2 pl-4 rounded-4xl
            outline-1 outline-primary/20   ">
-            <input type="email" autocomplete="true" autofocus autocorrect="on" 
-            name="email" placeholder="Email Address"
-            class="outline-0 text-primary ">
-            <button type="submit" class="px-5 py-2 text-sm bg-primary text-black rounded-4xl font-semibold duration-300 transition-all active:scale-105">
-              <div class="hidden xs:block">Subscribe</div>
-              <div class="block xs:hidden">
-                <svg width="1rem" height="1rem" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.691 8.507c0 2.847 1.582 5.29 3.806 5.29 2.223 0 3.803-2.443 3.803-5.29 0-2.846-1.348-4.51-3.803-4.51-2.456 0-3.806 1.664-3.806 4.51zM1.326 19.192c.82.537 2.879.805 6.174.805 3.295 0 5.353-.268 6.174-.804a.5.5 0 0 0 .225-.453c-.152-2.228-2.287-3.343-6.403-3.343-4.117 0-6.249 1.115-6.395 3.344a.5.5 0 0 0 .225.451zM18 17a1 1 0 0 1-1-1v-3h-3a1 1 0 1 1 0-2h3V8a1 1 0 1 1 2 0v3h3a1 1 0 1 1 0 2h-3v3a1 1 0 0 1-1 1z" fill="#000000"/></svg>
-              </div>
-            </button>
-           </form>
+              <input type="email" autocomplete="true" autofocus autocorrect="on" name="email"
+                placeholder="Email Address" class="outline-0 text-primary ">
+              <button type="submit"
+                class="px-5 py-2 text-sm bg-primary text-black rounded-4xl font-semibold duration-300 transition-all active:scale-105">
+                <div class="hidden xs:block">Subscribe</div>
+                <div class="block xs:hidden">
+                  <svg width="1rem" height="1rem" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M3.691 8.507c0 2.847 1.582 5.29 3.806 5.29 2.223 0 3.803-2.443 3.803-5.29 0-2.846-1.348-4.51-3.803-4.51-2.456 0-3.806 1.664-3.806 4.51zM1.326 19.192c.82.537 2.879.805 6.174.805 3.295 0 5.353-.268 6.174-.804a.5.5 0 0 0 .225-.453c-.152-2.228-2.287-3.343-6.403-3.343-4.117 0-6.249 1.115-6.395 3.344a.5.5 0 0 0 .225.451zM18 17a1 1 0 0 1-1-1v-3h-3a1 1 0 1 1 0-2h3V8a1 1 0 1 1 2 0v3h3a1 1 0 1 1 0 2h-3v3a1 1 0 0 1-1 1z"
+                      fill="#000000" />
+                  </svg>
+                </div>
+              </button>
+            </form>
 
 
           </div>
@@ -917,7 +870,7 @@
 
             </div>
 
-                <!-- Company -->
+            <!-- Company -->
             <div class="space-y-5 p-0 lg:p-4 ">
               <h4 class="text-gray font-semibold">Company</h4>
               <div class="flex flex-col gap-3 text-primary/90 text-sm">
@@ -930,7 +883,7 @@
             </div>
 
             <!-- Resources -->
-               <div class="space-y-5 p-0 lg:p-4 ">
+            <div class="space-y-5 p-0 lg:p-4 ">
               <h4 class="text-gray font-semibold">Resources </h4>
               <div class="flex flex-col gap-3 text-primary/90 text-sm">
                 <a href="#">Blog</a>
@@ -941,8 +894,8 @@
 
             </div>
 
-                        <!-- Follow -->
-               <div class="space-y-5 p-0 lg:p-4 ">
+            <!-- Follow -->
+            <div class="space-y-5 p-0 lg:p-4 ">
               <h4 class="text-gray font-semibold">Follow</h4>
               <div class="flex flex-col gap-3  text-primary/90 text-sm">
                 <a href="#">Instagram</a>
@@ -954,7 +907,7 @@
             </div>
 
             <!-- Community -->
-               <div class="space-y-5 p-0 lg:p-4">
+            <div class="space-y-5 p-0 lg:p-4">
               <h4 class="text-gray font-semibold">Community </h4>
               <div class="flex flex-col gap-3 text-primary/90 text-sm">
                 <a href="#">Discord Community</a>
@@ -964,7 +917,7 @@
 
             </div>
 
-         
+
 
 
 
@@ -974,17 +927,19 @@
 
         <!-- down footer -->
 
-        <div class="flex row-span-4 gap-2 flex-col sm:flex-row  sm:justify-between border-t-1 border-gray/20 py-4 text-gray">
+        <div
+          class="flex row-span-4 gap-2 flex-col sm:flex-row  sm:justify-between border-t-1 border-gray/20 py-4 text-gray">
           <p> &copy; 2026 Vela inc. All rights reserved.</p>
           <p>Built for those who want to know.</p>
         </div>
 
-</div>
-
-
-
       </div>
 
-     </footer>
-  </body>
+
+
+    </div>
+
+  </footer>
+</body>
+
 </html>

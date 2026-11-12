@@ -389,6 +389,9 @@
   .max-w-7xl {
     max-width: var(--container-7xl);
   }
+  .max-w-9 {
+    max-width: calc(var(--spacing) * 9);
+  }
   .border-collapse {
     border-collapse: collapse;
   }

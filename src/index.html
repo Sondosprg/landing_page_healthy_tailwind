@@ -863,34 +863,37 @@
     </section>
 
     <!-- FOOTER -->
-     <footer class="h-screen bg-[#111111] bg-[url(imgs/footer/bg.svg)] bg-center bg-no-repeat bg-cover ">
+     <footer class="h-auto bg-[url(imgs/footer/bg.svg)] bg-center bg-no-repeat bg-cover ">
 
       <div class="max-w-7xl mx-auto px-6 sm:px-15 py-4  h-full">
 
-<div class="grid grid-rows-[4fr_auto]  h-full  pt-7 sm:pt-14 ">
+<div class="grid  md:grid-rows-[4fr_auto]   h-full  pt-7 sm:pt-14   ">
           <!-- top footer -->
-        <div class="grid grid-cols-1 md:grid-cols-2  ">
+        <div class="grid grid-cols-1 lg:grid-cols-2 row-span-2  gap-8 lg:gap-0 pb-6   ">
 
           <!-- subscribe -->
 
-          <div class=" flex flex-col  space-y-6">
+          <div class=" flex flex-col  space-y-6  ">
 
            <div class="flex flex-col gap-4">
              <h2 class="font-semibold text-xl text-primary"> 
              Vela
             </h2>
-                        <p class="text-primary/80 leading-6 w-90">
+                        <p class="text-primary/80 leading-6 w-auto sm:w-90">
               The health dashboard that turns your scattered signals into one clear picture.
             </p>
            </div>
 
-           <form action="" class="flex  justify-between bg-[#262626] w-aut sm:w-100 py-2 pr-2 pl-4 rounded-4xl
-           outline-1 outline-primary/20 ">
+           <form action="" class="flex gap-2 justify-between flex-wrap bg-[#262626]  sm:w-100 py-2 pr-2 pl-4 rounded-4xl
+           outline-1 outline-primary/20   ">
             <input type="email" autocomplete="true" autofocus autocorrect="on" 
             name="email" placeholder="Email Address"
-            class="outline-0 text-primary">
-            <button type="submit" class="px-5 py-2 bg-primary text-black rounded-4xl font-semibold duration-300 transition-all active:scale-105">
-              Subscribe
+            class="outline-0 text-primary ">
+            <button type="submit" class="px-5 py-2 text-sm bg-primary text-black rounded-4xl font-semibold duration-300 transition-all active:scale-105">
+              <div class="hidden xs:block">Subscribe</div>
+              <div class="block xs:hidden">
+                <svg width="1rem" height="1rem" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M3.691 8.507c0 2.847 1.582 5.29 3.806 5.29 2.223 0 3.803-2.443 3.803-5.29 0-2.846-1.348-4.51-3.803-4.51-2.456 0-3.806 1.664-3.806 4.51zM1.326 19.192c.82.537 2.879.805 6.174.805 3.295 0 5.353-.268 6.174-.804a.5.5 0 0 0 .225-.453c-.152-2.228-2.287-3.343-6.403-3.343-4.117 0-6.249 1.115-6.395 3.344a.5.5 0 0 0 .225.451zM18 17a1 1 0 0 1-1-1v-3h-3a1 1 0 1 1 0-2h3V8a1 1 0 1 1 2 0v3h3a1 1 0 1 1 0 2h-3v3a1 1 0 0 1-1 1z" fill="#000000"/></svg>
+              </div>
             </button>
            </form>
 
@@ -899,10 +902,11 @@
 
 
           <!-- quick links -->
-          <div class="grid grid-cols-[1fr_1fr_1fr]   ">
+          <div class="grid xs:grid-cols-[1fr_1fr]  sm:grid-cols-[1fr_1fr_1fr] 
+          gap-6 sm:gap-4  ">
 
             <!-- Product -->
-            <div class="space-y-5">
+            <div class="space-y-5 p-0 lg:p-4">
               <h4 class="text-gray font-semibold">Product</h4>
               <div class="flex flex-col gap-3 text-primary/90 text-sm">
                 <a href="#">Features</a>
@@ -914,7 +918,7 @@
             </div>
 
                 <!-- Company -->
-            <div class="space-y-5">
+            <div class="space-y-5 p-0 lg:p-4 ">
               <h4 class="text-gray font-semibold">Company</h4>
               <div class="flex flex-col gap-3 text-primary/90 text-sm">
                 <a href="#">About</a>
@@ -926,7 +930,7 @@
             </div>
 
             <!-- Resources -->
-               <div class="space-y-5">
+               <div class="space-y-5 p-0 lg:p-4 ">
               <h4 class="text-gray font-semibold">Resources </h4>
               <div class="flex flex-col gap-3 text-primary/90 text-sm">
                 <a href="#">Blog</a>
@@ -938,7 +942,7 @@
             </div>
 
                         <!-- Follow -->
-               <div class="space-y-5">
+               <div class="space-y-5 p-0 lg:p-4 ">
               <h4 class="text-gray font-semibold">Follow</h4>
               <div class="flex flex-col gap-3  text-primary/90 text-sm">
                 <a href="#">Instagram</a>
@@ -950,7 +954,7 @@
             </div>
 
             <!-- Community -->
-               <div class="space-y-5">
+               <div class="space-y-5 p-0 lg:p-4">
               <h4 class="text-gray font-semibold">Community </h4>
               <div class="flex flex-col gap-3 text-primary/90 text-sm">
                 <a href="#">Discord Community</a>
@@ -970,7 +974,7 @@
 
         <!-- down footer -->
 
-        <div class="flex    justify-between border-t-1 border-gray/20 py-4 text-gray">
+        <div class="flex row-span-4 gap-2 flex-col sm:flex-row  sm:justify-between border-t-1 border-gray/20 py-4 text-gray">
           <p> &copy; 2026 Vela inc. All rights reserved.</p>
           <p>Built for those who want to know.</p>
         </div>

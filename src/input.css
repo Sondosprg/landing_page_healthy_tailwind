@@ -1,5 +1,14 @@
 @import "tailwindcss";
 
+/* @keyframes fadeIn {
+  0% {
+    @apply backdrop-blur-[0];
+  }
+  100% {
+    @apply backdrop-blur-[50%] shadow-primary/10 shadow-[0px_0px_50px_2.5px_#000];
+  }
+} */
+
 @theme {
   --color-primary: #fff;
   --color-secondary: #000;
@@ -7,6 +16,7 @@
   --color-gray: var(--color-gray-500);
 
   --breakpoint-xs: 400px;
+  --animate-fadeIn: fadeIn linear both;
 }
 
 @layer base {
@@ -15,10 +25,13 @@
     @apply cursor-pointer;
   }
   ::-webkit-scrollbar {
-    display: none;
+    @apply hidden;
   }
   /* html,
   body {
     @apply overflow-x-hidden;
   } */
+}
+
+@layer components {
 }

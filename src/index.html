@@ -16,73 +16,88 @@
 </head>
 
 <body>
-  <!--    -->
-  <!-- rounded-full animate-fadeIn [animation-timeline:scroll(root)] [animation-range:400px_600px]*
-         animate-fadeIn [animation-timeline:scroll(root)] [animation-range:400px_600px] -->
-  <header class="z-1000 flex justify-between items-center 
-   px-6 sm:px-15 
-      fixed
-      w-[clamp(200px , auto , 600px)]
-      inset-x-4
-      sm:inset-x-15
-      py-4
-     backdrop-blur-[50px]
-     rounded-full
-     top-2
-    shadow-primary/10 shadow-[0px_0px_50px_2.5px_#000] 
 
-      ">
+  <header class="header ">
+
     <!-- header part 01 -->
-    <nav class="hidden  md:flex md:justify-between md:items-center md:gap-8 lg:gap-25 text-white/90
-        ">
+    <nav class=" nav-bar">
       <!-- logo -->
-      <a href="#home" class="font-semibold text-xl">Velo</a>
+      <a href="#home" class="logo">Velo</a>
 
       <!-- nav links -->
-      <ul class="flex justify-center items-center gap-7">
-        <li class="duration-300 transition-all active:scale-105">
-          <a href="#HowItWork" class="text-sm text-nowrap">How it Work</a>
+      <ul class="nav-link">
+        <li class="">
+          <a href="#HowItWork" class="link">How it Work</a>
         </li>
-        <li class="duration-300 transition-all active:scale-105">
-          <a href="#Features">Features</a>
+        <li class="hover-effect">
+          <a href="#Features" class="link">Features</a>
         </li>
-        <li class="duration-300 transition-all active:scale-105">
-          <a href="#Pricing">Pricing</a>
+        <li class="hover-effect">
+          <a href="#Pricing" class="link">Pricing</a>
         </li>
-        <li class="duration-300 transition-all active:scale-105">
-          <a href="#Reviews">Reviews</a>
+        <li class="hover-effect">
+          <a href="#Reviews" class="link">Reviews</a>
         </li>
       </ul>
     </nav>
 
-    <div class="md:hidden">
+    <div class="md:hidden ">
+
+
+      <input type="checkbox" id="menu" class="peer hidden">
+      <label for="menu">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="icon hover-effect">
+          <path fill-rule="evenodd"
+            d="M9.293 2.293a1 1 0 0 1 1.414 0l7 7A1 1 0 0 1 17 11h-1v6a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-6H3a1 1 0 0 1-.707-1.707l7-7Z"
+            clip-rule="evenodd" />
+        </svg>
+      </label>
+
+      <div for="menu" class=" bg-primary  absolute
+      left-0 top-0
+      overflow-hidden
+       h-screen w-full rounded-xl hidden peer-checked:block
+      shadow-xl">
+        <div class="p-4">
+          <div class="flex  justify-end">
+            <label for="menu"
+              class="size-8 rounded-full hover-effect  flex justify-center items-center text-xl font-semibold bg-gray/10 text-center ">&times;</label>
+          </div>
+          <nav class="mt-8">
+            <ul class="px-4 space-y-8 text-xl font-bold">
+              <li class="">
+                <a href="#HowItWork" >How it Work</a>
+              </li>
+              <li class="hover-effect">
+                <a href="#Features" >Features</a>
+              </li>
+              <li class="hover-effect">
+                <a href="#Pricing" >Pricing</a>
+              </li>
+              <li class="hover-effect">
+                <a href="#Reviews">Reviews</a>
+              </li>
+            </ul>
+          </nav>
+
+
+        </div>
+      </div>
       <!-- menu icon -->
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5 text-primary">
-        <path fill-rule="evenodd"
-          d="M2 4.75A.75.75 0 0 1 2.75 4h14.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 4.75ZM2 10a.75.75 0 0 1 .75-.75h14.5a.75.75 0 0 1 0 1.5H2.75A.75.75 0 0 1 2 10Zm0 5.25a.75.75 0 0 1 .75-.75h14.5a.75.75 0 0 1 0 1.5H2.75a.75.75 0 0 1-.75-.75Z"
-          clip-rule="evenodd" />
-      </svg>
+      <!-- <button class="icon hover-effect">
+
+      </button>
+       -->
+
+
     </div>
 
     <!-- header part 02 -->
-    <div class="flex   justify-center items-center gap-2 sm:gap-4 text-primary">
-      <button
-        class=" px-5 py-2 hidden xs:flex hover:bg-linear-to-r hover:from-transparent hover:via-primary/30 hover:to-transparent py-2 hover:bg-white/10 duration-300 transition-all active:scale-105 rounded-4xl text-white">
-        <div class="hidden xs:flex text-nowrap">Sign in</div>
-        <svg class="flex xs:hidden" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="1.5rem"
-          height="1.5rem" xmlns:c2pa="http://c2pa.org/manifest">
-          <circle cx="256" cy="150" r="107" fill="#fff" />
-          <path d="M64 440 C64 350 150 277 256 277 C362 277 448 350 448 440 Q448 468 420 468 L92 468 Q64 468 64 440 Z"
-            fill="#fff" />
-          <metadata>
-            <c2pa:manifest>
-              AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYToxZWFlMWM4Ni1mNjBhLTQ2YTktYmRiNi0xMzBkZGQxMzc2YzYAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaPc2ilXAoyH2N6D+UYpDzgMAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDoyMjMxNTYzNi1kODJlLTQyNWEtODQzOC1jODA1ODNjYTc3NjJscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNo6hwXMf/rRc3Eqbaif0evKAAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFgg8z9FnFIDeIHNqh5I+Ia9Mv1CkMeJjywyZhzq2A91yhOkZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaK5Ebh/YoTyFUH/xljE5ciwAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRMAAAAAAAAAAAAAAAAZGhhc2hYIFXSl/DvFWoDCEDM7OMlYryEjUeuVnn9rRnc2BTnks7VZG5hbWVuanVtYmYgbWFuaWZlc3RqZXhjbHVzaW9uc4GiZXN0YXJ0GQFGZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOjFlYWUxYzg2LWY2MGEtNDZhOS1iZGI2LTEzMGRkZDEzNzZjNi9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOjg4MzI3ODI5LWE1NTMtNGM2Ni04MjRlLTFjNTdiMmU1MWYxYnJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCDzP0WcUgN4gc2qHkj4hr0y/UKQx4mPLDJmHOrYD3XKE6JjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggTV0H2A6BaL1zqnQxbSp1hynmgpFyxQYxEb2sNE1zZUKiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFgg49eNCxCRJRLPqncYrHchllsgNHiOF5CijUMkI+lNZGx0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQKwu5b1HQRJz+xaZCjAnTLkn3HgRZaz0nBVe/8OYzyZWQNn13wB9UDNbETTFhkg4C8NcY1hFYHBx98P90hIpS5s=
-            </c2pa:manifest>
-          </metadata>
-        </svg>
+    <div class="header-btns">
+      <button class="btn-secondary-outline ">
+        Sign in
       </button>
-      <button
-        class=" px-5 py-2 text-wrap  bg-primary text-black rounded-4xl font-semibold duration-300 transition-all active:scale-105">
+      <button class=" btn-primary">
         Start Tracking
       </button>
     </div>
@@ -90,26 +105,24 @@
 
 
   <!-- HERO SECTION  -->
-  <main id="Home" class="bg-[url(imgs/hero/bg.png)] bg-center bg-no-repeat bg-cover min-h-screen overflow-y-scroll">
-    <div class="max-w-7xl mx-auto px-6 sm:px-15 py-4 mt-7 sm:mt-15">
+  <main id="Home" class="hero">
+    <div class="container">
 
       <!-- content -->
       <div class="grid grid-cols-1 md:grid-cols-2 min-h-[80vh] mt-15 mb-5">
         <!-- left content -->
         <div class="flex flex-col md:justify-between">
           <div class="flex flex-col gap-2">
-            <h2 class="text-6xl font-semibold text-primary">
+            <h2 class="main-title">
               Your health,
               <br />
               finally legible
             </h2>
             <div class="flex mt-4 gap-4 flex-wrap">
-              <button
-                class="px-5 py-2 text-nowrap bg-primary text-black rounded-4xl font-semibold duration-300 transition-all active:scale-105">
+              <button class="btn-primary">
                 Start Tracking Now
               </button>
-              <button
-                class=" px-5 bg-linear-to-r from-transparent via-primary/30 to-transparent py-2 bg-white/10 duration-300 transition-all active:scale-105 rounded-4xl text-white">
+              <button class="btn-secondary">
                 Watch a Demo
               </button>
 
@@ -134,7 +147,7 @@
               <h4>Track 100+ Biomarkers</h4>
               <div class="flex gap-2 items-center">
                 <p class="text-white/80">See what we measure</p>
-                <button class="duration-300 transition-all active:scale-105">
+                <button class="hover-effect">
                   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                     stroke="currentColor" class="size-3 font-semibold text-primary">
                     <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
@@ -150,18 +163,18 @@
 
   <!-- SUPPORTS -->
   <section class="min-h-[20vh]">
-    <div class="max-w-7xl mx-auto px-6 sm:px-15 py-2 sm:py-4">
+    <div class="container">
       <div class="flex justify-center items-center flex-col gap-4 py-7 sm:py-14">
         <!-- trust  -->
         <div>
-          <p class="font-semiboldtext-secondary">
+          <p class="font-semibold text-secondary">
             Trusted by health-conscious humans across 40+ countries
           </p>
         </div>
 
         <!-- companies names -->
         <div
-          class="flex mt-5 w-100 justify-center items-center gap-6 text-gray text-xl sm:text-3xl flex-wrap  w-full flex-row">
+          class="flex mt-5  justify-center items-center gap-6 text-gray text-xl sm:text-3xl flex-wrap  w-full flex-row">
           <div>
             <svg width="2rem" height="2rem" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M1.3294 19L0.731323 17.9641L5.06145 15.4641L7.1029 19H1.3294Z" fill="#9ca3af" />
@@ -192,15 +205,15 @@
   </section>
 
   <!-- HOW IT WORKS -->
-  <section id="HowItWork" class="h-auto bg-[#F6F6F6]">
-    <div class="max-w-7xl mx-auto px-6 sm:px-15 py-2 sm:py-4 ">
+  <section id="HowItWork" class="h-auto bg-bg">
+    <div class="container ">
       <div class="flex justify-center items-center flex-col gap-7 sm:gap-14 py-7 sm:py-14   ">
         <!-- header -->
         <div class="flex flex-col justify-center items-center gap-2   w-full">
-          <h6 class="text-accent text-sm font-semibold">HOW IT WORKS</h6>
+          <h6 class="mini-title">HOW IT WORKS</h6>
           <div class="text-center">
-            <h2 class="text-4xl font-semibold">Scattered to seen,</h2>
-            <h2 class="text-4xl font-semibold ">in three steps</h2>
+            <h2 class="secondary-title">Scattered to seen,</h2>
+            <h2 class="secondary-title">in three steps</h2>
           </div>
 
 
@@ -251,7 +264,7 @@
 
   <!-- FEATURES -->
   <section id="Features" class=" h-auto">
-    <div class="max-w-7xl mx-auto px-6 sm:px-15 py-2 sm:py-4">
+    <div class=" mx-auto px-6 sm:px-15 py-2 sm:py-4">
       <div class="grid grid-rows-[1fr_auto] gap-y-7 sm:gap-14 py-7 sm:py-14 ">
         <!-- header -->
         <div class="grid md:grid-cols-[0.5fr_2fr_0.5fr] h-fit gap-2 row-span-1">
@@ -317,7 +330,7 @@
 
   <!-- REVIEWS -->
   <section id="Reviews" class="h-auto ">
-    <div class="max-w-7xl mx-auto px-6 sm:px-15 py-2 sm:py-4">
+    <div class=" mx-auto px-6 sm:px-15 py-2 sm:py-4">
 
       <div class="flex flex-col gap-2 py-7 sm:py-14 ">
         <!-- header -->
@@ -415,7 +428,7 @@
 
   <!-- PRICING -->
   <section id="Pricing" class="h-auto bg-[#F6F6F6]">
-    <div class="max-w-7xl mx-auto px-6 sm:px-15 py-2 sm:py-4">
+    <div class=" mx-auto px-6 sm:px-15 py-2 sm:py-4">
       <div class="flex  justify-center items-center flex-col  gap-7 sm:gap-14 py-7 sm:py-14">
         <!-- header of pricing -->
         <div class="flex flex-col  w-full sm:justify-center sm:items-center gap-2
@@ -435,7 +448,7 @@
 
         <!-- plans of pricing -->
         <!-- flex flex-col md:flex-row  gap-4  flex-wrap sm:justify-center sm:items-center w-full -->
-        <div class="grid grid-cols-1 lg:grid-cols-[1fr_1fr] w-full sm:w-auto gap-4">
+        <div class="grid grid-cols-1 lg:grid-cols-[1fr_1fr]   w-full sm:w-auto gap-4 ">
           <!-- plan 1  -->
           <div class="bg-linear-to-br   from-accent/80 via-transparent to-accent/80 p-[0.1rem] rounded-xl">
             <div class="p-4  bg-primary sm:w-100  h-auto rounded-xl">
@@ -634,7 +647,7 @@
 
   <!-- FAQ -->
   <section class="h-auto">
-    <div class="max-w-7xl mx-auto px-6 sm:px-15 py-2 sm:py-4">
+    <div class=" mx-auto px-6 sm:px-15 py-2 sm:py-4">
       <div class="grid grid-cols-1 md:grid-cols-2 items-center justify-between
           py-7 sm:py-14 gap-4 ">
         <!-- header of faq -->
@@ -801,7 +814,7 @@
 
   <!-- TRACKING NOW -->
   <section class="bg-[url(imgs/trackingNow/bg.png)]  bg-cover bg-center  bg-no-repeat   h-screen ">
-    <div class="max-w-7xl mx-auto px-6 sm:px-15 py-4 h-100 ">
+    <div class=" mx-auto px-6 sm:px-15 py-4 h-100 ">
 
 
       <!-- content -->
@@ -842,7 +855,7 @@
   <!-- FOOTER -->
   <footer class="h-auto bg-[url(imgs/footer/bg.svg)] bg-center bg-no-repeat bg-cover ">
 
-    <div class="max-w-7xl mx-auto px-6 sm:px-15 py-4  h-full">
+    <div class=" mx-auto px-6 sm:px-15 py-4  h-full">
 
       <div class="grid  md:grid-rows-[4fr_auto]   h-full  pt-7 sm:pt-14   ">
         <!-- top footer -->

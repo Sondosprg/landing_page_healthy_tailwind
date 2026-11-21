@@ -15,15 +15,26 @@
   }
 }
 
+@keyframes showSmooth {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 @theme {
   --color-primary: #fff;
   --color-secondary: #000;
   --color-accent: var(--color-blue-600);
   --color-gray: var(--color-gray-500);
-  --color-bg: #F6F6F6;
+  --color-bg: #f6f6f6;
 
   --breakpoint-xs: 400px;
   --animate-fadeIn: fadeIn ease-in-out 2s both;
+  --animate-showSmooth: showSmooth ease-in-out  0.5s both;
 }
 
 @layer base {
@@ -36,6 +47,7 @@
   }
 
   .container {
+    @apply mx-auto px-6 sm:px-15 py-2 sm:py-4;
   }
 }
 
@@ -75,10 +87,18 @@
     @apply rounded-4xl text-primary hidden lg:flex px-5 py-2  hover:bg-linear-to-r hover:from-transparent hover:via-primary/30 hover:to-transparent  hover:bg-white/10 duration-300 transition-all active:scale-105;
   }
 
-  .btn-secondary{
-    @apply  px-5 bg-linear-to-r from-transparent via-primary/30 to-transparent py-2 bg-white/10 duration-300 transition-all active:scale-105 rounded-4xl text-white;
-
+  .btn-secondary {
+    @apply px-5 bg-linear-to-r from-transparent via-primary/30 to-transparent py-2 bg-white/10 duration-300 transition-all active:scale-105 rounded-4xl text-white;
   }
+
+  .btn-accent {
+    @apply px-5 py-2 text-wrap  bg-accent text-primary rounded-4xl font-semibold duration-300 transition-all active:scale-105;
+  }
+
+  .btn-dark {
+    @apply px-5 py-2 w-fit bg-secondary duration-300 transition-all active:scale-105 rounded-4xl text-white;
+  }
+
   .header-btns {
     @apply hidden md:flex  justify-center items-center gap-2 sm:gap-4;
   }
@@ -91,15 +111,33 @@
     @apply max-w-7xl mx-auto px-6 sm:px-15 py-4 mt-7 sm:mt-15;
   }
 
-  .main-title{
+  .main-title {
     @apply text-6xl font-semibold text-primary;
   }
 
-  .mini-title{
+  .mini-title {
     @apply text-accent text-sm font-semibold;
   }
-  .secondary-title{
+  .secondary-title {
     @apply text-4xl font-semibold;
   }
 
+  .img-steps {
+    @apply rounded-xl  aspect-square;
+  }
+
+  .sidebar-active {
+    @apply border-l-2 border-accent;
+  }
+  .review-img {
+    @apply rounded-2xl h-100 w-full object-cover;
+  }
+
+  .point {
+    @apply size-2 rounded-full bg-gray/30;
+  }
+
+  .point-active {
+    @apply bg-secondary;
+  }
 }

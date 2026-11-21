@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="en" dir="ltr" class="scroll-smooth">
 
 <head>
   <meta charset="UTF-8" />
@@ -22,21 +22,21 @@
     <!-- header part 01 -->
     <nav class=" nav-bar">
       <!-- logo -->
-      <a href="#home" class="logo">Velo</a>
+      <a href="#Home" class="logo">Velo</a>
 
       <!-- nav links -->
       <ul class="nav-link">
         <li class="">
-          <a href="#HowItWork" class="link">How it Work</a>
+          <a href="#HowItWork" class="link hover-effect">How it Work</a>
         </li>
         <li class="hover-effect">
-          <a href="#Features" class="link">Features</a>
+          <a href="#Features" class="link hover-effect">Features</a>
         </li>
         <li class="hover-effect">
-          <a href="#Pricing" class="link">Pricing</a>
+          <a href="#Pricing" class="link hover-effect">Pricing</a>
         </li>
-        <li class="hover-effect">
-          <a href="#Reviews" class="link">Reviews</a>
+        <li class="">
+          <a href="#Reviews" class="link hover-effect">Reviews</a>
         </li>
       </ul>
     </nav>
@@ -53,6 +53,7 @@
         </svg>
       </label>
 
+      <!-- menu in small screen  -->
       <div for="menu" class=" bg-primary  absolute
       left-0 top-0
       overflow-hidden
@@ -66,28 +67,53 @@
           <nav class="mt-8">
             <ul class="px-4 space-y-8 text-xl font-bold">
               <li class="">
-                <a href="#HowItWork" >How it Work</a>
+                <a href="#HowItWork">How it Work</a>
               </li>
               <li class="hover-effect">
-                <a href="#Features" >Features</a>
+                <a href="#Features">Features</a>
               </li>
               <li class="hover-effect">
-                <a href="#Pricing" >Pricing</a>
+                <a href="#Pricing">Pricing</a>
               </li>
               <li class="hover-effect">
                 <a href="#Reviews">Reviews</a>
               </li>
+              <li>
+                <a href="#" class=" flex gap-2  items-center">
+                  <div class="text-accent hover-effect">Sign in</div>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-4 h-4 fill-accent"
+                    xmlns:c2pa="http://c2pa.org/manifest">
+                    <circle cx="256" cy="150" r="107" />
+                    <path
+                      d="M64 440 C64 350 150 277 256 277 C362 277 448 350 448 440 Q448 468 420 468 L92 468 Q64 468 64 440 Z" />
+                    <metadata>
+                      <c2pa:manifest>
+                        AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYToxZWFlMWM4Ni1mNjBhLTQ2YTktYmRiNi0xMzBkZGQxMzc2YzYAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaPc2ilXAoyH2N6D+UYpDzgMAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDoyMjMxNTYzNi1kODJlLTQyNWEtODQzOC1jODA1ODNjYTc3NjJscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNo6hwXMf/rRc3Eqbaif0evKAAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFgg8z9FnFIDeIHNqh5I+Ia9Mv1CkMeJjywyZhzq2A91yhOkZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaK5Ebh/YoTyFUH/xljE5ciwAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRMAAAAAAAAAAAAAAAAZGhhc2hYIFXSl/DvFWoDCEDM7OMlYryEjUeuVnn9rRnc2BTnks7VZG5hbWVuanVtYmYgbWFuaWZlc3RqZXhjbHVzaW9uc4GiZXN0YXJ0GQFGZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOjFlYWUxYzg2LWY2MGEtNDZhOS1iZGI2LTEzMGRkZDEzNzZjNi9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOjg4MzI3ODI5LWE1NTMtNGM2Ni04MjRlLTFjNTdiMmU1MWYxYnJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCDzP0WcUgN4gc2qHkj4hr0y/UKQx4mPLDJmHOrYD3XKE6JjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggTV0H2A6BaL1zqnQxbSp1hynmgpFyxQYxEb2sNE1zZUKiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFgg49eNCxCRJRLPqncYrHchllsgNHiOF5CijUMkI+lNZGx0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQKwu5b1HQRJz+xaZCjAnTLkn3HgRZaz0nBVe/8OYzyZWQNn13wB9UDNbETTFhkg4C8NcY1hFYHBx98P90hIpS5s=
+                      </c2pa:manifest>
+                    </metadata>
+                  </svg>
+
+                </a>
+              </li>
+              <li>
+                <button class="btn-accent">
+                  <a href="#" class=" flex gap-2  items-center">
+                    <div>Start Tracking</div>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
+                      <path fill-rule="evenodd"
+                        d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16ZM6.75 9.25a.75.75 0 0 0 0 1.5h4.59l-2.1 1.95a.75.75 0 0 0 1.02 1.1l3.5-3.25a.75.75 0 0 0 0-1.1l-3.5-3.25a.75.75 0 1 0-1.02 1.1l2.1 1.95H6.75Z"
+                        clip-rule="evenodd" />
+                    </svg>
+                  </a>
+                </button>
+              </li>
+
             </ul>
           </nav>
 
 
         </div>
       </div>
-      <!-- menu icon -->
-      <!-- <button class="icon hover-effect">
-
-      </button>
-       -->
 
 
     </div>
@@ -223,7 +249,7 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 items-center justify-center min-h-100">
           <!-- step 1  -->
           <div class="space-y-4">
-            <img src="imgs/steps/01.png" alt="" class="rounded-xl  aspect-square" />
+            <img src="imgs/steps/01.png" alt="" class="img-steps" />
 
             <div class="space-y-2">
               <h4 class="font-semibold">Connect everything</h4>
@@ -236,7 +262,7 @@
 
           <!-- step 2  -->
           <div class="space-y-4">
-            <img src="imgs/steps/02.png" alt="" class="rounded-xl aspect-square" />
+            <img src="imgs/steps/02.png" alt="" class="img-steps" />
             <div class="space-y-2">
               <h4 class="font-semibold">Connect everything</h4>
               <p class="text-gray">
@@ -248,7 +274,7 @@
 
           <!-- step 3 -->
           <div class="space-y-4">
-            <img src="imgs/steps/03.png" alt="" class="rounded-xl  aspect-square" />
+            <img src="imgs/steps/03.png" alt="" class="img-steps" />
             <div class="space-y-2">
               <h4 class="font-semibold">Connect everything</h4>
               <p class="text-gray">
@@ -264,14 +290,14 @@
 
   <!-- FEATURES -->
   <section id="Features" class=" h-auto">
-    <div class=" mx-auto px-6 sm:px-15 py-2 sm:py-4">
+    <div class="container">
       <div class="grid grid-rows-[1fr_auto] gap-y-7 sm:gap-14 py-7 sm:py-14 ">
         <!-- header -->
         <div class="grid md:grid-cols-[0.5fr_2fr_0.5fr] h-fit gap-2 row-span-1">
           <div class="md:col-start-2 md:pl-4">
-            <h6 class="text-accent text-sm font-semibold">CORE FEATURES</h6>
-            <h2 class="text-4xl font-semibold">The signals that matter,</h2>
-            <h2 class="text-4xl font-semibold">without the noise.</h2>
+            <h6 class="mini-title">CORE FEATURES</h6>
+            <h2 class="secondary-title">The signals that matter,</h2>
+            <h2 class="secondary-title">without the noise.</h2>
           </div>
         </div>
 
@@ -281,7 +307,7 @@
           <!-- side bar  -->
           <div class="flex  space-y-4 h-full w-full   ">
             <ul class="flex items-center justify-center md:block overflow-x-scroll">
-              <li class="border-l-2 border-accent px-2 py-1 ">
+              <li class="sidebar-active px-2 py-1">
                 <button class="p-2">Connect</button>
               </li>
               <li class="px-2 py-1 ">
@@ -297,7 +323,7 @@
           </div>
 
           <!-- image content -->
-          <div class="space-y-4 h-full w-full   ">
+          <div class="h-full w-full ">
             <img src="imgs/features/connect.png" alt="" class="rounded-xl w-full h-full" />
           </div>
 
@@ -316,8 +342,7 @@
               </p>
             </div>
             <div>
-              <button
-                class="px-5 py-2 bg-secondary duration-300 transition-all active:scale-105 rounded-4xl text-white">
+              <button class="btn-dark">
                 Learn more
               </button>
             </div>
@@ -330,18 +355,19 @@
 
   <!-- REVIEWS -->
   <section id="Reviews" class="h-auto ">
-    <div class=" mx-auto px-6 sm:px-15 py-2 sm:py-4">
+    <!-- mx-auto px-6 sm:px-15 py-2 sm:py-4 -->
+    <div class="container">
 
       <div class="flex flex-col gap-2 py-7 sm:py-14 ">
         <!-- header -->
         <div class="flex flex-col md:flex-row  md:justify-between gap-4   py-6 md:py-10 lg:py-14">
           <div class="space-y-2 ">
-            <h6 class="text-accent text-sm font-semibold">REVIEWS</h6>
-            <h2 class="text-4xl font-semibold">People who finally get it</h2>
+            <h6 class="mini-title">REVIEWS</h6>
+            <h2 class="secondary-title">People who finally get it</h2>
           </div>
 
           <div class=" md:self-end ">
-            <button class="px-5 py-2 bg-secondary duration-300 transition-all active:scale-105 rounded-4xl text-white">
+            <button class="btn-dark">
               View more
             </button>
           </div>
@@ -352,7 +378,7 @@
           class="grid  grid-cols-[100%_100%_100%] md:grid-cols-[60%_60%_60%] gap-4 max-h-100 sm:min-w-100 overflow-y-scroll sm:overflow-x-scroll">
           <!-- card review 01 -->
           <div class="relative ">
-            <img src="imgs/reviews/01.jpg" alt="" class="rounded-2xl h-100 w-full object-cover" />
+            <img src="imgs/reviews/01.jpg" alt="" class="review-img" />
 
             <div class="absolute p-4 sm:p-8 inset-0 flex justify-between flex-col">
               <h4 class="text-primary font-semibold text-md w-auto">
@@ -369,7 +395,7 @@
 
           <!-- card review 02 -->
           <div class="relative  ">
-            <img src="imgs/reviews/02.jfif" alt="" class="rounded-2xl h-100 w-full object-cover" />
+            <img src="imgs/reviews/02.jfif" alt="" class="review-img" />
             <div class="absolute p-8 inset-0 flex justify-between flex-col">
               <h4 class="text-primary font-semibold text-md w-auto">
                 My doctor said my labs were 'fine.' Vela cross-referenced
@@ -385,7 +411,7 @@
 
           <!-- card review 03-->
           <div class="relative ">
-            <img src="imgs/reviews/03.jfif" alt="" class="rounded-2xl h-100  w-full object-cover" />
+            <img src="imgs/reviews/03.jfif" alt="" class="review-img" />
             <div class="absolute p-8 inset-0 flex justify-between flex-col">
               <h4 class="text-primary font-semibold text-md w-auto">
                 Vela helped me track my sleep and recovery patterns better
@@ -409,10 +435,10 @@
                 clip-rule="evenodd" />
             </svg>
           </button>
-          <div class="flex gap-2">
-            <div class="size-2 rounded-full bg-secondary"></div>
-            <div class="size-2 rounded-full bg-gray/30"></div>
-            <div class="size-2 rounded-full bg-gray/30"></div>
+          <div class="flex gap-2 ">
+            <div class="point point-active"></div>
+            <div class="point"></div>
+            <div class="point"></div>
           </div>
           <button class="bg-gray/10 p-2 rounded-full text-center transition-all duration-300 active:scale-105">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
@@ -433,9 +459,9 @@
         <!-- header of pricing -->
         <div class="flex flex-col  w-full sm:justify-center sm:items-center gap-2
           ">
-          <h6 class="text-accent text-sm font-semibold">PRICING</h6>
-          <h2 class="text-4xl font-semibold">Two plans,
-            <h2 class="text-4xl font-semibold">No surprises</h2>
+          <h6 class="mini-title">PRICING</h6>
+          <h2 class="secondary-title">Two plans,
+            <h2 class="secondary-title">No surprises</h2>
           </h2>
 
           <p class="text-gray leading-4 mt-2">
@@ -446,8 +472,6 @@
           </p>
         </div>
 
-        <!-- plans of pricing -->
-        <!-- flex flex-col md:flex-row  gap-4  flex-wrap sm:justify-center sm:items-center w-full -->
         <div class="grid grid-cols-1 lg:grid-cols-[1fr_1fr]   w-full sm:w-auto gap-4 ">
           <!-- plan 1  -->
           <div class="bg-linear-to-br   from-accent/80 via-transparent to-accent/80 p-[0.1rem] rounded-xl">
@@ -467,8 +491,7 @@
                 </div>
 
                 <p class="text-gray font-medium text-xs">Billed annually · $144/year</p>
-                <button
-                  class="px-5 py-2  mt-4 bg-secondary duration-300 transition-all active:scale-105 rounded-4xl text-white">
+                <button class="px-5 py-2  mt-4 btn-dark w-full">
                   Start your 14-day trial
                 </button>
 
@@ -647,19 +670,18 @@
 
   <!-- FAQ -->
   <section class="h-auto">
-    <div class=" mx-auto px-6 sm:px-15 py-2 sm:py-4">
+    <div class="container">
       <div class="grid grid-cols-1 md:grid-cols-2 items-center justify-between
           py-7 sm:py-14 gap-4 ">
         <!-- header of faq -->
         <div class="flex flex-col  gap-4 sm:gap-8  h-full ">
           <div class="space-y-2">
-            <h6 class="text-accent text-sm font-semibold">FAQ</h6>
-            <h2 class="text-4xl font-semibold">
+            <h6 class="mini-title">FAQ</h6>
+            <h2 class="secondary-title">
               Common questions
             </h2>
           </div>
-          <button
-            class="px-5 py-2 w-fit bg-secondary duration-300 transition-all active:scale-105 rounded-4xl text-white">
+          <button class="btn-dark">
             Ask your Questions
           </button>
 
@@ -669,30 +691,37 @@
         <div class="flex flex-col  h-full ">
 
           <!-- Q1 -->
-          <div class="py-4 sm:py-6 border-b-1 border-gray/10">
-            <div class="flex justify-between">
-              <h4 class="font-semibold">What do I need to use Vela?</h4>
-              <button onclick="p.classList.toggle('hidden')"
-                class="flex justify-center items-center size-6 text-xs transition-all duration-300 active:scale-105  rounded-full hover:bg-gray/10">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                  class="size-4 text-gray">
-                  <path fill-rule="evenodd"
-                    d="M12 3.75a.75.75 0 0 1 .75.75v6.75h6.75a.75.75 0 0 1 0 1.5h-6.75v6.75a.75.75 0 0 1-1.5 0v-6.75H4.5a.75.75 0 0 1 0-1.5h6.75V4.5a.75.75 0 0 1 .75-.75Z"
-                    clip-rule="evenodd" />
-                </svg>
-              </button>
+          <div class="py-4 sm:py-6 border-b border-gray/10">
+            <div class="flex flex-col  justify-between">
+              <div class="flex justify-between">
+                <h4 class="font-semibold">What do I need to use Vela?</h4>
+                <button
+                  class="flex justify-center items-center size-6 text-xs transition-all duration-300 active:scale-105  rounded-full hover:bg-gray/10">
+                  <label for="q1">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                      class="size-4 text-gray">
+                      <path fill-rule="evenodd"
+                        d="M12 3.75a.75.75 0 0 1 .75.75v6.75h6.75a.75.75 0 0 1 0 1.5h-6.75v6.75a.75.75 0 0 1-1.5 0v-6.75H4.5a.75.75 0 0 1 0-1.5h6.75V4.5a.75.75 0 0 1 .75-.75Z"
+                        clip-rule="evenodd" />
+                    </svg>
+                  </label>
+                </button>
+              </div>
+              <input type="checkbox" id="q1" class="peer hidden">
 
+              <div for=""
+                class="hidden animate-showSmooth peer-checked:block  pt-4  transition-all duration-300 ease-linear">
+
+                <p class="text-gray font-medium  text-xs ">
+                  Just one thing: any health data source you already have. That includes Apple Health, Google Fit, Oura,
+                  Whoop, Garmin, Fitbit, and 40+ others. If you've ever uploaded a blood panel, we'll read that too.
+                </p>
+
+              </div>
 
 
             </div>
-            <div id="p" class="hidden pt-4  transition-all duration-300 ease-linear">
 
-              <p class="text-gray font-medium  text-xs ">
-                Just one thing: any health data source you already have. That includes Apple Health, Google Fit, Oura,
-                Whoop, Garmin, Fitbit, and 40+ others. If you've ever uploaded a blood panel, we'll read that too.
-              </p>
-
-            </div>
           </div>
 
           <!-- Q2 -->
@@ -867,7 +896,7 @@
 
             <div class="flex flex-col gap-4">
               <h2 class="font-semibold text-xl text-primary">
-                Vela
+                Velo
               </h2>
               <p class="text-primary/80 leading-6 w-auto sm:w-90">
                 The health dashboard that turns your scattered signals into one clear picture.
@@ -972,6 +1001,20 @@
           class="flex row-span-4 gap-2 flex-col sm:flex-row  sm:justify-between border-t-1 border-gray/20 py-4 text-gray">
           <p> &copy; 2026 Vela inc. All rights reserved.</p>
           <p>Built for those who want to know.</p>
+        </div>
+        <div class="bg-gray/20 w-fit px-4 py-2 rounded-md flex gap-2 items-center ">
+          <h4 class="text-primary">Developed by Soundous Cherifi
+          </h4>
+          <a href="https://github.com/Sondosprg" class="hover-effect" target="_blank">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" class="size-4 shrink-0"
+              aria-hidden="true">
+              <circle cx="6" cy="5" r="2.75" />
+              <circle cx="6" cy="19" r="2.75" />
+              <circle cx="18" cy="8" r="2.75" />
+              <path d="M6 7.5v9M18 10.5c0 3-2 4.5-5 4.5h-2c-3 0-5 1.5-5 3" fill="none" stroke="white" stroke-width="2"
+                stroke-linecap="round" />
+            </svg>
+          </a>
         </div>
 
       </div>

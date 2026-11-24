@@ -131,8 +131,8 @@
 
 
   <!-- HERO SECTION  -->
-  <main id="Home" class="hero">
-    <div class="container">
+  <main id="Home" class="hero ">
+    <div class="soLogic-container ">
 
       <!-- content -->
       <div class="grid grid-cols-1 md:grid-cols-2 min-h-[80vh] mt-15 mb-5">
@@ -189,7 +189,7 @@
 
   <!-- SUPPORTS -->
   <section class="min-h-[20vh]">
-    <div class="container">
+    <div class="soLogic-container">
       <div class="flex justify-center items-center flex-col gap-4 py-7 sm:py-14">
         <!-- trust  -->
         <div>
@@ -232,7 +232,7 @@
 
   <!-- HOW IT WORKS -->
   <section id="HowItWork" class="h-auto bg-bg">
-    <div class="container ">
+    <div class="soLogic-container ">
       <div class="flex justify-center items-center flex-col gap-7 sm:gap-14 py-7 sm:py-14   ">
         <!-- header -->
         <div class="flex flex-col justify-center items-center gap-2   w-full">
@@ -290,7 +290,7 @@
 
   <!-- FEATURES -->
   <section id="Features" class=" h-auto">
-    <div class="container">
+    <div class="soLogic-container">
       <div class="grid grid-rows-[1fr_auto] gap-y-7 sm:gap-14 py-7 sm:py-14 ">
         <!-- header -->
         <div class="grid md:grid-cols-[0.5fr_2fr_0.5fr] h-fit gap-2 row-span-1">
@@ -356,7 +356,7 @@
   <!-- REVIEWS -->
   <section id="Reviews" class="h-auto ">
     <!-- mx-auto px-6 sm:px-15 py-2 sm:py-4 -->
-    <div class="container">
+    <div class="soLogic-container">
 
       <div class="flex flex-col gap-2 py-7 sm:py-14 ">
         <!-- header -->
@@ -374,11 +374,13 @@
         </div>
 
         <!-- cards of reviews  (carousel)  -->
-        <div
+        <div id="carsoul"
           class="grid  grid-cols-[100%_100%_100%] md:grid-cols-[60%_60%_60%] gap-4 max-h-100 sm:min-w-100 overflow-y-scroll sm:overflow-x-scroll">
           <!-- card review 01 -->
           <div class="relative ">
-            <img src="imgs/reviews/01.jpg" alt="" class="review-img" />
+            <img
+
+             src="imgs/reviews/01.jpg" alt="" class="review-img img" />
 
             <div class="absolute p-4 sm:p-8 inset-0 flex justify-between flex-col">
               <h4 class="text-primary font-semibold text-md w-auto">
@@ -395,7 +397,9 @@
 
           <!-- card review 02 -->
           <div class="relative  ">
-            <img src="imgs/reviews/02.jfif" alt="" class="review-img" />
+            <img 
+             id="img"
+             src="imgs/reviews/02.jfif" alt="" class="review-img img" />
             <div class="absolute p-8 inset-0 flex justify-between flex-col">
               <h4 class="text-primary font-semibold text-md w-auto">
                 My doctor said my labs were 'fine.' Vela cross-referenced
@@ -411,7 +415,8 @@
 
           <!-- card review 03-->
           <div class="relative ">
-            <img src="imgs/reviews/03.jfif" alt="" class="review-img" />
+            <img
+             src="imgs/reviews/03.jfif" alt="" class="review-img img" />
             <div class="absolute p-8 inset-0 flex justify-between flex-col">
               <h4 class="text-primary font-semibold text-md w-auto">
                 Vela helped me track my sleep and recovery patterns better
@@ -428,7 +433,8 @@
 
         <!-- controller -->
         <div class="flex gap-4 items-center mt-6">
-          <button class="bg-gray/10 p-2 rounded-full text-center transition-all duration-300 active:scale-105">
+          <button 
+          class="bg-gray/10 p-2 rounded-full text-center transition-all duration-300 active:scale-105">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
               <path fill-rule="evenodd"
                 d="M7.72 12.53a.75.75 0 0 1 0-1.06l7.5-7.5a.75.75 0 1 1 1.06 1.06L9.31 12l6.97 6.97a.75.75 0 1 1-1.06 1.06l-7.5-7.5Z"
@@ -440,7 +446,19 @@
             <div class="point"></div>
             <div class="point"></div>
           </div>
-          <button class="bg-gray/10 p-2 rounded-full text-center transition-all duration-300 active:scale-105">
+          <button 
+          onclick="
+          const imgs = document.getElementsByClassName('img');
+          console.log(imgs);
+         for (let i=0 ; i<imgs.length ; i++) {
+          if(i+1==imgs.length){
+            i=0;
+          }
+          imgs[i].src = imgs[i+1].src;
+          imgs[i+1].src = imgs[i].src;
+         }
+          "
+          class="bg-gray/10 p-2 rounded-full text-center transition-all duration-300 active:scale-105">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
               <path fill-rule="evenodd"
                 d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
@@ -453,8 +471,8 @@
   </section>
 
   <!-- PRICING -->
-  <section id="Pricing" class="h-auto bg-[#F6F6F6]">
-    <div class=" mx-auto px-6 sm:px-15 py-2 sm:py-4">
+  <section id="Pricing" class="h-auto bg-bg">
+    <div class="soLogic-container">
       <div class="flex  justify-center items-center flex-col  gap-7 sm:gap-14 py-7 sm:py-14">
         <!-- header of pricing -->
         <div class="flex flex-col  w-full sm:justify-center sm:items-center gap-2
@@ -670,7 +688,7 @@
 
   <!-- FAQ -->
   <section class="h-auto">
-    <div class="container">
+    <div class="soLogic-container">
       <div class="grid grid-cols-1 md:grid-cols-2 items-center justify-between
           py-7 sm:py-14 gap-4 ">
         <!-- header of faq -->
@@ -725,7 +743,7 @@
           </div>
 
           <!-- Q2 -->
-          <div class="py-4 sm:py-6 border-b-1 border-gray/10">
+          <div class="py-4 sm:py-6 border-b border-gray/10">
 
             <div class="flex justify-between">
               <h4 class="font-semibold">How long until Vela starts surfacing patterns?</h4>
@@ -747,7 +765,7 @@
 
 
           <!-- Q3 -->
-          <div class="py-4 sm:py-6 border-b-1 border-gray/10">
+          <div class="py-4 sm:py-6 border-b border-gray/10">
 
             <div class="flex justify-between">
               <h4 class="font-semibold">Do I need a doctor's referral?</h4>
@@ -768,7 +786,7 @@
           </div>
 
           <!-- Q4 -->
-          <div class="py-4 sm:py-6 border-b-1 border-gray/10">
+          <div class="py-4 sm:py-6 border-b border-gray/10">
 
             <div class="flex justify-between">
               <h4 class="font-semibold">Who can see my health data?</h4>
@@ -789,7 +807,7 @@
           </div>
 
           <!-- Q5 -->
-          <div class="py-4 sm:py-6 border-b-1 border-gray/10">
+          <div class="py-4 sm:py-6 border-b border-gray/10">
 
             <div class="flex justify-between">
               <h4 class="font-semibold">Can I export or delete everything?</h4>
@@ -811,7 +829,7 @@
 
 
           <!-- Q6 -->
-          <div class="py-4 sm:py-6 border-b-1 border-gray/10">
+          <div class="py-4 sm:py-6 border-b border-gray/10">
 
             <div class="flex justify-between">
               <h4 class="font-semibold">How is this different from Apple Health or my Oura app?</h4>
@@ -838,13 +856,12 @@
 
 
     </div>
-    </div>
+
   </section>
 
   <!-- TRACKING NOW -->
   <section class="bg-[url(imgs/trackingNow/bg.png)]  bg-cover bg-center  bg-no-repeat   h-screen ">
-    <div class=" mx-auto px-6 sm:px-15 py-4 h-100 ">
-
+    <div class="soLogic-container ">
 
       <!-- content -->
       <div class="flex justify-center items-center gap-8  flex-col py-7 sm:py-14   h-screen  ">
@@ -865,12 +882,10 @@
         </div>
 
         <div class="flex gap-4 flex-col xs:flex-row sm:gap-2 ">
-          <button
-            class="px-5 py-2 w-fit bg-secondary duration-300 transition-all active:scale-105 rounded-4xl text-white">
+          <button class="btn-dark">
             Start Tracking Now
           </button>
-          <button
-            class=" px-5 bg-linear-to-r from-transparent via-primary/30 to-transparent py-2 bg-white/10 duration-300 transition-all active:scale-105 rounded-4xl text-white">
+          <button class="btn-secondary">
             Explore More
           </button>
 
@@ -884,7 +899,8 @@
   <!-- FOOTER -->
   <footer class="h-auto bg-[url(imgs/footer/bg.svg)] bg-center bg-no-repeat bg-cover ">
 
-    <div class=" mx-auto px-6 sm:px-15 py-4  h-full">
+    <!-- mx-auto px-6 sm:px-15 py-4  h-full -->
+    <div class=" soLogic-container mt-0">
 
       <div class="grid  md:grid-rows-[4fr_auto]   h-full  pt-7 sm:pt-14   ">
         <!-- top footer -->
@@ -998,7 +1014,7 @@
         <!-- down footer -->
 
         <div
-          class="flex row-span-4 gap-2 flex-col sm:flex-row  sm:justify-between border-t-1 border-gray/20 py-4 text-gray">
+          class="flex row-span-4 gap-2 flex-col sm:flex-row  sm:justify-between border-t border-gray/20 py-4 text-gray">
           <p> &copy; 2026 Vela inc. All rights reserved.</p>
           <p>Built for those who want to know.</p>
         </div>
@@ -1024,6 +1040,9 @@
     </div>
 
   </footer>
+
+  <script src="main.js"></script>
 </body>
+
 
 </html>

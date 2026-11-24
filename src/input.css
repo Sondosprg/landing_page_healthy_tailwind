@@ -34,7 +34,7 @@
 
   --breakpoint-xs: 400px;
   --animate-fadeIn: fadeIn ease-in-out 2s both;
-  --animate-showSmooth: showSmooth ease-in-out  0.5s both;
+  --animate-showSmooth: showSmooth ease-in-out 0.5s both;
 }
 
 @layer base {
@@ -46,14 +46,23 @@
     @apply hidden;
   }
 
-  .container {
-    @apply mx-auto px-6 sm:px-15 py-2 sm:py-4;
+  /* max-w-7xl px-6 sm:px-15 py-4 mt-7 sm:mt-15 mx-auto */
+  .soLogic-container {
+    @apply px-6 sm:px-15 py-4 mt-7 sm:mt-15;
   }
 }
 
+/* inset-x-4 sm:inset-x-15 py-4  w-[clamp(200px,auto,1156px)] */
 @layer components {
   .header {
-    @apply z-1000 flex justify-between items-center px-6 sm:px-15 fixed w-[clamp(200px,auto,1156px)] inset-x-4 sm:inset-x-15 py-4 rounded-full top-2 shadow-primary/10 shadow-[0px_0px_50px_2.5px_#000] animate-fadeIn [animation-timeline:scroll(root)] [animation-range:400px_1000px];
+    @apply z-1000 flex justify-between items-center px-6 sm:px-15 fixed 
+    rounded-full 
+    top-4 shadow-primary/10 
+    shadow-[0px_0px_50px_2.5px_#000] 
+    animate-fadeIn [animation-timeline:scroll(root)] 
+    [animation-range:400px_1000px]
+    inset-x-4 sm:inset-x-15 py-4
+    mx-auto;
   }
 
   .nav-bar {
@@ -105,10 +114,6 @@
 
   .hero {
     @apply bg-[url(imgs/hero/bg.png)] bg-center bg-no-repeat bg-cover min-h-screen overflow-y-scroll;
-  }
-
-  .container {
-    @apply max-w-7xl mx-auto px-6 sm:px-15 py-4 mt-7 sm:mt-15;
   }
 
   .main-title {

@@ -2,15 +2,12 @@
 
 @keyframes fadeIn {
   0% {
-    opacity: 1;
     backdrop-filter: blur(0px);
   }
   50% {
-    opacity: 0;
     backdrop-filter: blur(30px);
   }
   100% {
-    opacity: 1;
     backdrop-filter: blur(50px);
   }
 }
@@ -29,8 +26,8 @@
   --color-primary: #fff;
   --color-secondary: #000;
   --color-accent: var(--color-blue-600);
-  --color-gray: var(--color-gray-500);
-  --color-bg: #f6f6f6;
+  --color-description: var(--color-gray-500);
+  --color-smoke: #f6f6f6;
 
   --breakpoint-xs: 400px;
   --animate-fadeIn: fadeIn ease-in-out 2s both;
@@ -46,19 +43,20 @@
     @apply hidden;
   }
 
-  /* max-w-7xl px-6 sm:px-15 py-4 mt-7 sm:mt-15 mx-auto */
-  .soLogic-container {
-    @apply px-6 sm:px-15 py-4 mt-7 sm:mt-15;
-  }
+
+
 }
 
-/* inset-x-4 sm:inset-x-15 py-4  w-[clamp(200px,auto,1156px)] */
+
 @layer components {
+
+  .my-container {
+    @apply px-6 sm:px-15 py-4 mt-7 sm:mt-15;
+  }
   .header {
     @apply z-1000 flex justify-between items-center px-6 sm:px-15 fixed 
     rounded-full 
-    top-4 shadow-primary/10 
-    shadow-[0px_0px_50px_2.5px_#000] 
+    top-4 shadow-[0px_0px_50px_2.5px_rgba(255,255,255,0.1)]
     animate-fadeIn [animation-timeline:scroll(root)] 
     [animation-range:400px_1000px]
     inset-x-4 sm:inset-x-15 py-4
@@ -66,7 +64,7 @@
   }
 
   .nav-bar {
-    @apply flex justify-between md:items-center md:gap-8  lg:gap-25 text-white/90;
+    @apply flex justify-between md:items-center md:gap-8  lg:gap-25 text-primary/90;
   }
 
   .logo {
@@ -89,7 +87,7 @@
   }
 
   .btn-primary {
-    @apply px-5 py-2 text-wrap  bg-primary text-black rounded-4xl font-semibold duration-300 transition-all active:scale-105;
+    @apply px-5 py-2 text-wrap  bg-primary text-secondary rounded-4xl font-semibold duration-300 transition-all active:scale-105;
   }
 
   .btn-secondary-outline {
@@ -97,7 +95,7 @@
   }
 
   .btn-secondary {
-    @apply px-5 bg-linear-to-r from-transparent via-primary/30 to-transparent py-2 bg-white/10 duration-300 transition-all active:scale-105 rounded-4xl text-white;
+    @apply px-5 bg-linear-to-r from-transparent via-primary/30 to-transparent py-2 bg-primary/10 duration-300 transition-all active:scale-105 rounded-4xl text-white;
   }
 
   .btn-accent {
@@ -105,7 +103,7 @@
   }
 
   .btn-dark {
-    @apply px-5 py-2 w-fit bg-secondary duration-300 transition-all active:scale-105 rounded-4xl text-white;
+    @apply px-5 py-2 w-fit bg-secondary duration-300 transition-all active:scale-105 rounded-4xl text-primary;
   }
 
   .header-btns {
@@ -139,7 +137,7 @@
   }
 
   .point {
-    @apply size-2 rounded-full bg-gray/30;
+    @apply size-1.5 sm:size-2 rounded-full bg-description/30;
   }
 
   .point-active {

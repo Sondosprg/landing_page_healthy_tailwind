@@ -4,6 +4,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Vela turns your biomarkers, sleep, and activity into one clear health picture. Start your free 14-day trial." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Vela, Your health, finally legible" />
+  <meta property="og:description" content="One clear picture of your biomarkers, sleep, and activity." />
+
   <!-- css file -->
   <link href="./output.css" rel="stylesheet" />
   <title>Velo</title>
@@ -17,6 +23,7 @@
 
 <body>
 
+  <!-- HEADER -->
   <header class="header ">
 
     <!-- header part 01 -->
@@ -42,11 +49,10 @@
     </nav>
 
     <div class="md:hidden ">
-
-
       <input type="checkbox" id="menu" class="peer hidden">
-      <label for="menu">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="icon hover-effect">
+      <label for="menu" aria-label="menu icon">
+        <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+          class="icon hover-effect">
           <path fill-rule="evenodd"
             d="M9.293 2.293a1 1 0 0 1 1.414 0l7 7A1 1 0 0 1 17 11h-1v6a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-6H3a1 1 0 0 1-.707-1.707l7-7Z"
             clip-rule="evenodd" />
@@ -57,12 +63,12 @@
       <div for="menu" class=" bg-primary  absolute
       left-0 top-0
       overflow-hidden
-       h-screen w-full rounded-xl hidden peer-checked:block
+      h-[96vh]  w-full rounded-xl hidden peer-checked:block
       shadow-xl">
         <div class="p-4">
           <div class="flex  justify-end">
             <label for="menu"
-              class="size-8 rounded-full hover-effect  flex justify-center items-center text-xl font-semibold bg-gray/10 text-center ">&times;</label>
+              class="size-8 rounded-full hover-effect  flex justify-center items-center text-xl font-semibold bg-description/10 text-center ">&times;</label>
           </div>
           <nav class="mt-8">
             <ul class="px-4 space-y-8 text-xl font-bold">
@@ -80,32 +86,28 @@
               </li>
               <li>
                 <a href="#" class=" flex gap-2  items-center">
-                  <div class="text-accent hover-effect">Sign in</div>
+                  <div class="text-accent hover-effect ">Sign in</div>
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="w-4 h-4 fill-accent"
                     xmlns:c2pa="http://c2pa.org/manifest">
                     <circle cx="256" cy="150" r="107" />
                     <path
                       d="M64 440 C64 350 150 277 256 277 C362 277 448 350 448 440 Q448 468 420 468 L92 468 Q64 468 64 440 Z" />
-                    <metadata>
-                      <c2pa:manifest>
-                        AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYToxZWFlMWM4Ni1mNjBhLTQ2YTktYmRiNi0xMzBkZGQxMzc2YzYAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaPc2ilXAoyH2N6D+UYpDzgMAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDoyMjMxNTYzNi1kODJlLTQyNWEtODQzOC1jODA1ODNjYTc3NjJscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNo6hwXMf/rRc3Eqbaif0evKAAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFgg8z9FnFIDeIHNqh5I+Ia9Mv1CkMeJjywyZhzq2A91yhOkZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaK5Ebh/YoTyFUH/xljE5ciwAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRMAAAAAAAAAAAAAAAAZGhhc2hYIFXSl/DvFWoDCEDM7OMlYryEjUeuVnn9rRnc2BTnks7VZG5hbWVuanVtYmYgbWFuaWZlc3RqZXhjbHVzaW9uc4GiZXN0YXJ0GQFGZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOjFlYWUxYzg2LWY2MGEtNDZhOS1iZGI2LTEzMGRkZDEzNzZjNi9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOjg4MzI3ODI5LWE1NTMtNGM2Ni04MjRlLTFjNTdiMmU1MWYxYnJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCDzP0WcUgN4gc2qHkj4hr0y/UKQx4mPLDJmHOrYD3XKE6JjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggTV0H2A6BaL1zqnQxbSp1hynmgpFyxQYxEb2sNE1zZUKiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFgg49eNCxCRJRLPqncYrHchllsgNHiOF5CijUMkI+lNZGx0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQKwu5b1HQRJz+xaZCjAnTLkn3HgRZaz0nBVe/8OYzyZWQNn13wB9UDNbETTFhkg4C8NcY1hFYHBx98P90hIpS5s=
-                      </c2pa:manifest>
-                    </metadata>
+
                   </svg>
 
                 </a>
               </li>
               <li>
-                <button class="btn-accent">
-                  <a href="#" class=" flex gap-2  items-center">
-                    <div>Start Tracking</div>
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
-                      <path fill-rule="evenodd"
-                        d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16ZM6.75 9.25a.75.75 0 0 0 0 1.5h4.59l-2.1 1.95a.75.75 0 0 0 1.02 1.1l3.5-3.25a.75.75 0 0 0 0-1.1l-3.5-3.25a.75.75 0 1 0-1.02 1.1l2.1 1.95H6.75Z"
-                        clip-rule="evenodd" />
-                    </svg>
-                  </a>
-                </button>
+
+                <a href="#" class="btn-accent flex gap-2  items-center xs:text-nowrap btn-accent w-fit">
+                  <div>Start Tracking</div>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
+                    <path fill-rule="evenodd"
+                      d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16ZM6.75 9.25a.75.75 0 0 0 0 1.5h4.59l-2.1 1.95a.75.75 0 0 0 1.02 1.1l3.5-3.25a.75.75 0 0 0 0-1.1l-3.5-3.25a.75.75 0 1 0-1.02 1.1l2.1 1.95H6.75Z"
+                      clip-rule="evenodd" />
+                  </svg>
+                </a>
+
               </li>
 
             </ul>
@@ -120,42 +122,42 @@
 
     <!-- header part 02 -->
     <div class="header-btns">
-      <button class="btn-secondary-outline ">
+      <a href="#" class="btn-secondary-outline ">
         Sign in
-      </button>
-      <button class=" btn-primary">
+      </a>
+      <a href="#" class=" btn-primary">
         Start Tracking
-      </button>
+      </a>
     </div>
   </header>
 
 
   <!-- HERO SECTION  -->
   <main id="Home" class="hero ">
-    <div class="soLogic-container ">
+    <div class="my-container">
 
       <!-- content -->
-      <div class="grid grid-cols-1 md:grid-cols-2 min-h-[80vh] mt-15 mb-5">
+      <div class="grid grid-cols-1 md:grid-cols-2 min-h-[80vh] mt-15 mb-5  gap-4 ">
         <!-- left content -->
-        <div class="flex flex-col md:justify-between">
-          <div class="flex flex-col gap-2">
+        <div class="flex flex-col md:justify-between gap-4">
+          <div class="flex flex-col gap-2 xs:gap-4">
             <h2 class="main-title">
               Your health,
               <br />
               finally legible
             </h2>
             <div class="flex mt-4 gap-4 flex-wrap">
-              <button class="btn-primary">
+              <a href="#" class="btn-primary">
                 Start Tracking Now
-              </button>
-              <button class="btn-secondary">
+              </a>
+              <a href="#" class="btn-secondary">
                 Watch a Demo
-              </button>
+              </a>
 
             </div>
           </div>
 
-          <div class="mt-4 sm:mt-0">
+          <div>
             <p class="text-primary/95 w-80">
               Vela turns your biomarkers, sleep, and activity into one clear
               picture so you stop guessing and start acting.
@@ -165,17 +167,17 @@
 
         <!-- right content -->
         <div class="flex flex-col justify-end md:items-end">
-          <div class="p-2 bg-white/10 mt-2 sm:mt-0 w-auto xs:w-80 rounded-2xl text-white">
+          <div class="p-2 bg-primary/10  w-auto xs:w-80 rounded-2xl text-primary">
             <div>
-              <img src="imgs/hero/secondary.png" class="w-100 h-18 rounded-2xl object-cover" alt="" />
+              <img src="imgs/hero/secondary.png" class="w-100 h-18 rounded-2xl object-cover" alt="see details" />
             </div>
             <div class="mt-4">
               <h4>Track 100+ Biomarkers</h4>
               <div class="flex gap-2 items-center">
-                <p class="text-white/80">See what we measure</p>
-                <button class="hover-effect">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                    stroke="currentColor" class="size-3 font-semibold text-primary">
+                <p class="text-primary/80">See what we measure</p>
+                <button class="hover-effect" aria-label="see details">
+                  <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    stroke-width="1.5" stroke="currentColor" class="size-3 font-semibold text-primary">
                     <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
                   </svg>
                 </button>
@@ -188,8 +190,8 @@
   </main>
 
   <!-- SUPPORTS -->
-  <section class="min-h-[20vh]">
-    <div class="soLogic-container">
+  <section>
+    <div class="my-container">
       <div class="flex justify-center items-center flex-col gap-4 py-7 sm:py-14">
         <!-- trust  -->
         <div>
@@ -200,7 +202,7 @@
 
         <!-- companies names -->
         <div
-          class="flex mt-5  justify-center items-center gap-6 text-gray text-xl sm:text-3xl flex-wrap  w-full flex-row">
+          class="flex mt-5  justify-center items-center gap-6 text-description text-xl sm:text-3xl flex-wrap  w-full flex-row">
           <div>
             <svg width="2rem" height="2rem" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M1.3294 19L0.731323 17.9641L5.06145 15.4641L7.1029 19H1.3294Z" fill="#9ca3af" />
@@ -231,8 +233,8 @@
   </section>
 
   <!-- HOW IT WORKS -->
-  <section id="HowItWork" class="h-auto bg-bg">
-    <div class="soLogic-container ">
+  <section id="HowItWork" class=" bg-bg">
+    <div class="my-container ">
       <div class="flex justify-center items-center flex-col gap-7 sm:gap-14 py-7 sm:py-14   ">
         <!-- header -->
         <div class="flex flex-col justify-center items-center gap-2   w-full">
@@ -253,7 +255,7 @@
 
             <div class="space-y-2">
               <h4 class="font-semibold">Connect everything</h4>
-              <p class="text-gray">
+              <p class="text-description">
                 Sync your wearables and upload past lab results in seconds.
                 One tap, no spreadsheets.
               </p>
@@ -265,7 +267,7 @@
             <img src="imgs/steps/02.png" alt="" class="img-steps" />
             <div class="space-y-2">
               <h4 class="font-semibold">Connect everything</h4>
-              <p class="text-gray">
+              <p class="text-description">
                 Sync your wearables and upload past lab results in seconds.
                 One tap, no spreadsheets.
               </p>
@@ -277,7 +279,7 @@
             <img src="imgs/steps/03.png" alt="" class="img-steps" />
             <div class="space-y-2">
               <h4 class="font-semibold">Connect everything</h4>
-              <p class="text-gray">
+              <p class="text-description">
                 Sync your wearables and upload past lab results in seconds.
                 One tap, no spreadsheets.
               </p>
@@ -290,7 +292,7 @@
 
   <!-- FEATURES -->
   <section id="Features" class=" h-auto">
-    <div class="soLogic-container">
+    <div class="my-container">
       <div class="grid grid-rows-[1fr_auto] gap-y-7 sm:gap-14 py-7 sm:py-14 ">
         <!-- header -->
         <div class="grid md:grid-cols-[0.5fr_2fr_0.5fr] h-fit gap-2 row-span-1">
@@ -324,39 +326,39 @@
 
           <!-- image content -->
           <div class="h-full w-full ">
-            <img src="imgs/features/connect.png" alt="" class="rounded-xl w-full h-full" />
+            <img src="imgs/features/connect.png" alt="" class="rounded-xl w-full h-full" alt="Connect image />
           </div>
 
           <!-- explanations -->
-          <div class="space-y-4 md:space-y-8 h-full w-full md:col-span-2 lg:col-span-1 ">
-            <div class="space-y-2 md:space-y-4">
-              <h4 class="font-semibold text-2xl">
-                Every wearable, every <br />
-                lab synced live.
-              </h4>
-              <p class="text-gray text-xs font-medium">
-                No CSV exports, no manual entries, no reconciling
-                spreadsheets. Vela pulls from Apple Health, Oura, Whoop,
-                Garmin, and 40+ partners — and keeps every reading in sync,
-                every minute of the day.
-              </p>
-            </div>
-            <div>
-              <button class="btn-dark">
-                Learn more
-              </button>
-            </div>
+          <div class=" space-y-4 md:space-y-8 h-full w-full md:col-span-2 lg:col-span-1 ">
+            <div class=" space-y-2 md:space-y-4">
+            <h4 class="font-semibold text-2xl">
+              Every wearable, every <br />
+              lab synced live.
+            </h4>
+            <p class="text-description text-xs font-medium">
+              No CSV exports, no manual entries, no reconciling
+              spreadsheets. Vela pulls from Apple Health, Oura, Whoop,
+              Garmin, and 40+ partners — and keeps every reading in sync,
+              every minute of the day.
+            </p>
+          </div>
+          <div>
+            <button class="btn-dark">
+              Learn more
+            </button>
           </div>
         </div>
-
       </div>
+
+    </div>
     </div>
   </section>
 
   <!-- REVIEWS -->
   <section id="Reviews" class="h-auto ">
     <!-- mx-auto px-6 sm:px-15 py-2 sm:py-4 -->
-    <div class="soLogic-container">
+    <div class="my-container">
 
       <div class="flex flex-col gap-2 py-7 sm:py-14 ">
         <!-- header -->
@@ -378,9 +380,7 @@
           class="grid  grid-cols-[100%_100%_100%] md:grid-cols-[60%_60%_60%] gap-4 max-h-100 sm:min-w-100 overflow-y-scroll sm:overflow-x-scroll">
           <!-- card review 01 -->
           <div class="relative ">
-            <img
-
-             src="imgs/reviews/01.jpg" alt="" class="review-img img" />
+            <img src="imgs/reviews/01.jpg" alt="" class="review-img img" />
 
             <div class="absolute p-4 sm:p-8 inset-0 flex justify-between flex-col">
               <h4 class="text-primary font-semibold text-md w-auto">
@@ -389,7 +389,7 @@
               </h4>
               <div>
                 <p class="text-primary">Daniel Reyes</p>
-                <p class="text-gray">28, Austin</p>
+                <p class="text-description">28, Austin</p>
               </div>
             </div>
 
@@ -397,9 +397,7 @@
 
           <!-- card review 02 -->
           <div class="relative  ">
-            <img 
-             id="img"
-             src="imgs/reviews/02.jfif" alt="" class="review-img img" />
+            <img id="img" src="imgs/reviews/02.jfif" alt="" class="review-img img" />
             <div class="absolute p-8 inset-0 flex justify-between flex-col">
               <h4 class="text-primary font-semibold text-md w-auto">
                 My doctor said my labs were 'fine.' Vela cross-referenced
@@ -408,15 +406,14 @@
               </h4>
               <div>
                 <p class="text-primary">Aisha Patel</p>
-                <p class="text-gray">32, London</p>
+                <p class="text-description">32, London</p>
               </div>
             </div>
           </div>
 
           <!-- card review 03-->
           <div class="relative ">
-            <img
-             src="imgs/reviews/03.jfif" alt="" class="review-img img" />
+            <img src="imgs/reviews/03.jfif" alt="" class="review-img img" />
             <div class="absolute p-8 inset-0 flex justify-between flex-col">
               <h4 class="text-primary font-semibold text-md w-auto">
                 Vela helped me track my sleep and recovery patterns better
@@ -425,7 +422,7 @@
               </h4>
               <div>
                 <p class="text-primary">Lucas Chen</p>
-                <p class="text-gray">29, San Francisco</p>
+                <p class="text-description">29, San Francisco</p>
               </div>
             </div>
           </div>
@@ -433,8 +430,7 @@
 
         <!-- controller -->
         <div class="flex gap-4 items-center mt-6">
-          <button 
-          class="bg-gray/10 p-2 rounded-full text-center transition-all duration-300 active:scale-105">
+          <button class="bg-description/10 p-2 rounded-full text-center transition-all duration-300 active:scale-105">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
               <path fill-rule="evenodd"
                 d="M7.72 12.53a.75.75 0 0 1 0-1.06l7.5-7.5a.75.75 0 1 1 1.06 1.06L9.31 12l6.97 6.97a.75.75 0 1 1-1.06 1.06l-7.5-7.5Z"
@@ -446,19 +442,7 @@
             <div class="point"></div>
             <div class="point"></div>
           </div>
-          <button 
-          onclick="
-          const imgs = document.getElementsByClassName('img');
-          console.log(imgs);
-         for (let i=0 ; i<imgs.length ; i++) {
-          if(i+1==imgs.length){
-            i=0;
-          }
-          imgs[i].src = imgs[i+1].src;
-          imgs[i+1].src = imgs[i].src;
-         }
-          "
-          class="bg-gray/10 p-2 rounded-full text-center transition-all duration-300 active:scale-105">
+          <button class="bg-description/10 p-2 rounded-full text-center transition-all duration-300 active:scale-105">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
               <path fill-rule="evenodd"
                 d="M16.28 11.47a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 0 1-1.06-1.06L14.69 12 7.72 5.03a.75.75 0 0 1 1.06-1.06l7.5 7.5Z"
@@ -472,7 +456,7 @@
 
   <!-- PRICING -->
   <section id="Pricing" class="h-auto bg-bg">
-    <div class="soLogic-container">
+    <div class="my-container">
       <div class="flex  justify-center items-center flex-col  gap-7 sm:gap-14 py-7 sm:py-14">
         <!-- header of pricing -->
         <div class="flex flex-col  w-full sm:justify-center sm:items-center gap-2
@@ -482,9 +466,9 @@
             <h2 class="secondary-title">No surprises</h2>
           </h2>
 
-          <p class="text-gray leading-4 mt-2">
+          <p class="text-description leading-4 mt-2">
             Start with a free 14-day trial — no credit card required.
-          <p class="text-gray leading-4">
+          <p class="text-description leading-4">
             Cancel anytime, no questions asked.
           </p>
           </p>
@@ -501,14 +485,14 @@
                   popular</button>
               </div>
 
-              <div class="flex flex-col  border-gray/20 gap-2 py-6">
+              <div class="flex flex-col  border-description/20 gap-2 py-6">
 
                 <div class=" w-full flex items-center gap-2 ">
                   <h2 class="text-3xl font-semibold">$12</h2>
-                  <span class="text-gray">months</span>
+                  <span class="text-description">months</span>
                 </div>
 
-                <p class="text-gray font-medium text-xs">Billed annually · $144/year</p>
+                <p class="text-description font-medium text-xs">Billed annually · $144/year</p>
                 <button class="px-5 py-2  mt-4 btn-dark w-full">
                   Start your 14-day trial
                 </button>
@@ -516,7 +500,7 @@
               </div>
 
               <div class="pt-4 sm:pt-6">
-                <h4 class="text-xs text-gray">Everything included</h4>
+                <h4 class="text-xs text-description">Everything included</h4>
                 <ul class="py-4 px-2 space-y-4">
                   <li class="flex gap-1 ">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
@@ -589,30 +573,30 @@
 
           </div>
           <!-- plan 2  -->
-          <div class="border-[0.1rem]   border-gray/5 rounded-xl">
+          <div class="border-[0.1rem]   border-description/5 rounded-xl">
             <div class="p-4  bg-primary sm:w-100 h-full  rounded-xl">
 
               <div>
                 <h4 class="font-semibold">Family</h4>
               </div>
 
-              <div class="flex flex-col  border-gray/20 gap-2 py-6">
+              <div class="flex flex-col  border-description/20 gap-2 py-6">
 
                 <div class=" w-full flex items-center gap-2 ">
                   <h2 class="text-3xl font-semibold">$24</h2>
-                  <span class="text-gray">months</span>
+                  <span class="text-description">months</span>
                 </div>
 
-                <p class="text-gray font-medium text-xs">$288 billed annually · for up to 5 users</p>
+                <p class="text-description font-medium text-xs">$288 billed annually · for up to 5 users</p>
                 <button
-                  class="px-5 py-2 mt-4 border border-gray/20  duration-300 transition-all active:scale-105 rounded-4xl text-secondary">
+                  class="px-5 py-2 mt-4 border border-description/20  duration-300 transition-all active:scale-105 rounded-4xl text-secondary">
                   Get started
                 </button>
 
               </div>
 
               <div class="pt-4 sm:pt-6">
-                <h4 class="text-xs text-gray">Everything included</h4>
+                <h4 class="text-xs text-description">Everything included</h4>
                 <ul class="py-4 px-2 space-y-4">
                   <li class="flex gap-1 ">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
@@ -688,7 +672,7 @@
 
   <!-- FAQ -->
   <section class="h-auto">
-    <div class="soLogic-container">
+    <div class="my-container">
       <div class="grid grid-cols-1 md:grid-cols-2 items-center justify-between
           py-7 sm:py-14 gap-4 ">
         <!-- header of faq -->
@@ -709,15 +693,15 @@
         <div class="flex flex-col  h-full ">
 
           <!-- Q1 -->
-          <div class="py-4 sm:py-6 border-b border-gray/10">
+          <div class="py-4 sm:py-6 border-b border-description/10">
             <div class="flex flex-col  justify-between">
               <div class="flex justify-between">
                 <h4 class="font-semibold">What do I need to use Vela?</h4>
                 <button
-                  class="flex justify-center items-center size-6 text-xs transition-all duration-300 active:scale-105  rounded-full hover:bg-gray/10">
+                  class="flex justify-center items-center size-6 text-xs transition-all duration-300 active:scale-105  rounded-full hover:bg-description/10">
                   <label for="q1">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                      class="size-4 text-gray">
+                      class="size-4 text-description">
                       <path fill-rule="evenodd"
                         d="M12 3.75a.75.75 0 0 1 .75.75v6.75h6.75a.75.75 0 0 1 0 1.5h-6.75v6.75a.75.75 0 0 1-1.5 0v-6.75H4.5a.75.75 0 0 1 0-1.5h6.75V4.5a.75.75 0 0 1 .75-.75Z"
                         clip-rule="evenodd" />
@@ -730,7 +714,7 @@
               <div for=""
                 class="hidden animate-showSmooth peer-checked:block  pt-4  transition-all duration-300 ease-linear">
 
-                <p class="text-gray font-medium  text-xs ">
+                <p class="text-description font-medium  text-xs ">
                   Just one thing: any health data source you already have. That includes Apple Health, Google Fit, Oura,
                   Whoop, Garmin, Fitbit, and 40+ others. If you've ever uploaded a blood panel, we'll read that too.
                 </p>
@@ -743,78 +727,78 @@
           </div>
 
           <!-- Q2 -->
-          <div class="py-4 sm:py-6 border-b border-gray/10">
+          <div class="py-4 sm:py-6 border-b border-description/10">
 
             <div class="flex justify-between">
               <h4 class="font-semibold">How long until Vela starts surfacing patterns?</h4>
               <button
-                class="flex justify-center items-center size-6 text-xs transition-all duration-300 active:scale-105  rounded-full hover:bg-gray/10">
+                class="flex justify-center items-center size-6 text-xs transition-all duration-300 active:scale-105  rounded-full hover:bg-description/10">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                  class="size-4 text-gray">
+                  class="size-4 text-description">
                   <path fill-rule="evenodd"
                     d="M12 3.75a.75.75 0 0 1 .75.75v6.75h6.75a.75.75 0 0 1 0 1.5h-6.75v6.75a.75.75 0 0 1-1.5 0v-6.75H4.5a.75.75 0 0 1 0-1.5h6.75V4.5a.75.75 0 0 1 .75-.75Z"
                     clip-rule="evenodd" />
                 </svg>
               </button>
             </div>
-            <p class="t
-              ext-gray font-medium hidden text-xs">Just one thing: any health data source you already have. That
+            <p class="text-description font-medium hidden text-xs">Just one thing: any health data source you already
+              have. That
               includes Apple Health, Google Fit, Oura, Whoop, Garmin, Fitbit, and 40+ others. If you've ever uploaded a
               blood panel, we'll read that too.</p>
           </div>
 
 
           <!-- Q3 -->
-          <div class="py-4 sm:py-6 border-b border-gray/10">
+          <div class="py-4 sm:py-6 border-b border-description/10">
 
             <div class="flex justify-between">
               <h4 class="font-semibold">Do I need a doctor's referral?</h4>
               <button
-                class="flex justify-center items-center size-6 text-xs transition-all duration-300 active:scale-105  rounded-full hover:bg-gray/10">
+                class="flex justify-center items-center size-6 text-xs transition-all duration-300 active:scale-105  rounded-full hover:bg-description/10">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                  class="size-4 text-gray">
+                  class="size-4 text-description">
                   <path fill-rule="evenodd"
                     d="M12 3.75a.75.75 0 0 1 .75.75v6.75h6.75a.75.75 0 0 1 0 1.5h-6.75v6.75a.75.75 0 0 1-1.5 0v-6.75H4.5a.75.75 0 0 1 0-1.5h6.75V4.5a.75.75 0 0 1 .75-.75Z"
                     clip-rule="evenodd" />
                 </svg>
               </button>
             </div>
-            <p class="t
-              ext-gray font-medium hidden text-xs">Just one thing: any health data source you already have. That
+            <p class="text-description font-medium hidden text-xs">Just one thing: any health data source you already
+              have. That
               includes Apple Health, Google Fit, Oura, Whoop, Garmin, Fitbit, and 40+ others. If you've ever uploaded a
               blood panel, we'll read that too.</p>
           </div>
 
           <!-- Q4 -->
-          <div class="py-4 sm:py-6 border-b border-gray/10">
+          <div class="py-4 sm:py-6 border-b border-description/10">
 
             <div class="flex justify-between">
               <h4 class="font-semibold">Who can see my health data?</h4>
               <button
-                class="flex justify-center items-center size-6 text-xs transition-all duration-300 active:scale-105  rounded-full hover:bg-gray/10">
+                class="flex justify-center items-center size-6 text-xs transition-all duration-300 active:scale-105  rounded-full hover:bg-description/10">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                  class="size-4 text-gray">
+                  class="size-4 text-description">
                   <path fill-rule="evenodd"
                     d="M12 3.75a.75.75 0 0 1 .75.75v6.75h6.75a.75.75 0 0 1 0 1.5h-6.75v6.75a.75.75 0 0 1-1.5 0v-6.75H4.5a.75.75 0 0 1 0-1.5h6.75V4.5a.75.75 0 0 1 .75-.75Z"
                     clip-rule="evenodd" />
                 </svg>
               </button>
             </div>
-            <p class="t
-              ext-gray font-medium hidden text-xs">Just one thing: any health data source you already have. That
+            <p class="text-description font-medium hidden text-xs">Just one thing: any health data source you already
+              have. That
               includes Apple Health, Google Fit, Oura, Whoop, Garmin, Fitbit, and 40+ others. If you've ever uploaded a
               blood panel, we'll read that too.</p>
           </div>
 
           <!-- Q5 -->
-          <div class="py-4 sm:py-6 border-b border-gray/10">
+          <div class="py-4 sm:py-6 border-b border-description/10">
 
             <div class="flex justify-between">
               <h4 class="font-semibold">Can I export or delete everything?</h4>
               <button
-                class="flex justify-center items-center size-6 text-xs transition-all duration-300 active:scale-105  rounded-full hover:bg-gray/10">
+                class="flex justify-center items-center size-6 text-xs transition-all duration-300 active:scale-105  rounded-full hover:bg-description/10">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                  class="size-4 text-gray">
+                  class="size-4 text-description">
                   <path fill-rule="evenodd"
                     d="M12 3.75a.75.75 0 0 1 .75.75v6.75h6.75a.75.75 0 0 1 0 1.5h-6.75v6.75a.75.75 0 0 1-1.5 0v-6.75H4.5a.75.75 0 0 1 0-1.5h6.75V4.5a.75.75 0 0 1 .75-.75Z"
                     clip-rule="evenodd" />
@@ -822,21 +806,21 @@
               </button>
             </div>
             <p class="t
-              ext-gray font-medium hidden text-xs">Just one thing: any health data source you already have. That
+              ext-description font-medium hidden text-xs">Just one thing: any health data source you already have. That
               includes Apple Health, Google Fit, Oura, Whoop, Garmin, Fitbit, and 40+ others. If you've ever uploaded a
               blood panel, we'll read that too.</p>
           </div>
 
 
           <!-- Q6 -->
-          <div class="py-4 sm:py-6 border-b border-gray/10">
+          <div class="py-4 sm:py-6 border-b border-description/10">
 
             <div class="flex justify-between">
               <h4 class="font-semibold">How is this different from Apple Health or my Oura app?</h4>
               <button
-                class="flex justify-center items-center size-6 text-xs transition-all duration-300 active:scale-105  rounded-full hover:bg-gray/10">
+                class="flex justify-center items-center size-6 text-xs transition-all duration-300 active:scale-105  rounded-full hover:bg-description/10">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                  class="size-4 text-gray">
+                  class="size-4 text-description">
                   <path fill-rule="evenodd"
                     d="M12 3.75a.75.75 0 0 1 .75.75v6.75h6.75a.75.75 0 0 1 0 1.5h-6.75v6.75a.75.75 0 0 1-1.5 0v-6.75H4.5a.75.75 0 0 1 0-1.5h6.75V4.5a.75.75 0 0 1 .75-.75Z"
                     clip-rule="evenodd" />
@@ -844,7 +828,7 @@
               </button>
             </div>
             <p class="t
-              ext-gray font-medium hidden text-xs">Just one thing: any health data source you already have. That
+              ext-description font-medium hidden text-xs">Just one thing: any health data source you already have. That
               includes Apple Health, Google Fit, Oura, Whoop, Garmin, Fitbit, and 40+ others. If you've ever uploaded a
               blood panel, we'll read that too.</p>
           </div>
@@ -861,7 +845,7 @@
 
   <!-- TRACKING NOW -->
   <section class="bg-[url(imgs/trackingNow/bg.png)]  bg-cover bg-center  bg-no-repeat   h-screen ">
-    <div class="soLogic-container ">
+    <div class="my-container ">
 
       <!-- content -->
       <div class="flex justify-center items-center gap-8  flex-col py-7 sm:py-14   h-screen  ">
@@ -899,8 +883,8 @@
   <!-- FOOTER -->
   <footer class="h-auto bg-[url(imgs/footer/bg.svg)] bg-center bg-no-repeat bg-cover ">
 
-    <!-- mx-auto px-6 sm:px-15 py-4  h-full -->
-    <div class=" soLogic-container mt-0">
+   
+    <div class=" my-container mt-0">
 
       <div class="grid  md:grid-rows-[4fr_auto]   h-full  pt-7 sm:pt-14   ">
         <!-- top footer -->
@@ -921,7 +905,7 @@
 
             <form action="" class="flex gap-2 justify-between flex-wrap bg-[#262626]  sm:w-100 py-2 pr-2 pl-4 rounded-4xl
            outline-1 outline-primary/20   ">
-              <input type="email" autocomplete="true" autofocus autocorrect="on" name="email"
+              <input type="email" autocomplete="true"  autocorrect="on" name="email"
                 placeholder="Email Address" class="outline-0 text-primary ">
               <button type="submit"
                 class="px-5 py-2 text-sm bg-primary text-black rounded-4xl font-semibold duration-300 transition-all active:scale-105">
@@ -946,7 +930,7 @@
 
             <!-- Product -->
             <div class="space-y-5 p-0 lg:p-4">
-              <h4 class="text-gray font-semibold">Product</h4>
+              <h4 class="text-description font-semibold">Product</h4>
               <div class="flex flex-col gap-3 text-primary/90 text-sm">
                 <a href="#">Features</a>
                 <a href="#">Pricing</a>
@@ -958,7 +942,7 @@
 
             <!-- Company -->
             <div class="space-y-5 p-0 lg:p-4 ">
-              <h4 class="text-gray font-semibold">Company</h4>
+              <h4 class="text-description font-semibold">Company</h4>
               <div class="flex flex-col gap-3 text-primary/90 text-sm">
                 <a href="#">About</a>
                 <a href="#">Manifesto</a>
@@ -970,7 +954,7 @@
 
             <!-- Resources -->
             <div class="space-y-5 p-0 lg:p-4 ">
-              <h4 class="text-gray font-semibold">Resources </h4>
+              <h4 class="text-description font-semibold">Resources </h4>
               <div class="flex flex-col gap-3 text-primary/90 text-sm">
                 <a href="#">Blog</a>
                 <a href="#">Help Center</a>
@@ -982,7 +966,7 @@
 
             <!-- Follow -->
             <div class="space-y-5 p-0 lg:p-4 ">
-              <h4 class="text-gray font-semibold">Follow</h4>
+              <h4 class="text-description font-semibold">Follow</h4>
               <div class="flex flex-col gap-3  text-primary/90 text-sm">
                 <a href="#">Instagram</a>
                 <a href="#">LinkedIn</a>
@@ -994,7 +978,7 @@
 
             <!-- Community -->
             <div class="space-y-5 p-0 lg:p-4">
-              <h4 class="text-gray font-semibold">Community </h4>
+              <h4 class="text-description font-semibold">Community </h4>
               <div class="flex flex-col gap-3 text-primary/90 text-sm">
                 <a href="#">Discord Community</a>
                 <a href="#">Developer Forum</a>
@@ -1014,11 +998,11 @@
         <!-- down footer -->
 
         <div
-          class="flex row-span-4 gap-2 flex-col sm:flex-row  sm:justify-between border-t border-gray/20 py-4 text-gray">
+          class="flex row-span-4 gap-2 flex-col sm:flex-row  sm:justify-between border-t border-description/20 py-4 text-description">
           <p> &copy; 2026 Vela inc. All rights reserved.</p>
           <p>Built for those who want to know.</p>
         </div>
-        <div class="bg-gray/20 w-fit px-4 py-2 rounded-md flex gap-2 items-center ">
+        <div class="bg-description/20 w-fit px-4 py-2 rounded-md flex gap-2 items-center ">
           <h4 class="text-primary">Developed by Soundous Cherifi
           </h4>
           <a href="https://github.com/Sondosprg" class="hover-effect" target="_blank">

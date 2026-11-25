@@ -1,9 +1,6 @@
-// const cars = document.getElementById("carsoul")
+const imgs = document.getElementsByClassName("img");
+const prevReviewBtn = document.getElementById("prev");
+const nextReviewBtn = document.getElementById("next");
 
-// console.log(cars);
-// console.log("ll");
 
-
-scrollBy(0,0
-   
-)
+console.log(imgs);

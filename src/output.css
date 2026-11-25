@@ -45,6 +45,7 @@
     --color-secondary: #000;
     --color-accent: var(--color-blue-600);
     --color-description: var(--color-gray-500);
+    --color-smoke: #f6f6f6;
     --animate-fadeIn: fadeIn ease-in-out 2s both;
     --animate-showSmooth: showSmooth ease-in-out 0.5s both;
   }
@@ -356,6 +357,9 @@
   .grid-rows-\[1fr_auto\] {
     grid-template-rows: 1fr auto;
   }
+  .grid-rows-\[100\%_100\%_100\%\] {
+    grid-template-rows: 100% 100% 100%;
+  }
   .flex-col {
     flex-direction: column;
   }
@@ -526,6 +530,9 @@
       background-color: color-mix(in oklab, var(--color-primary) 10%, transparent);
     }
   }
+  .bg-smoke {
+    background-color: var(--color-smoke);
+  }
   .bg-linear-to-br {
     --tw-gradient-position: to bottom right;
     @supports (background-image: linear-gradient(in lab, red, red)) {
@@ -668,6 +675,10 @@
   .leading-4 {
     --tw-leading: calc(var(--spacing) * 4);
     line-height: calc(var(--spacing) * 4);
+  }
+  .leading-4\.5 {
+    --tw-leading: calc(var(--spacing) * 4.5);
+    line-height: calc(var(--spacing) * 4.5);
   }
   .leading-6 {
     --tw-leading: calc(var(--spacing) * 6);
@@ -831,6 +842,9 @@
     .sm\:grid-cols-\[1fr_1fr_1fr\] {
       grid-template-columns: 1fr 1fr 1fr;
     }
+    .sm\:grid-cols-\[100\%_100\%_100\%\] {
+      grid-template-columns: 100% 100% 100%;
+    }
     .sm\:flex-row {
       flex-direction: row;
     }
@@ -854,6 +868,9 @@
     }
     .sm\:gap-14 {
       gap: calc(var(--spacing) * 14);
+    }
+    .sm\:overflow-clip {
+      overflow: clip;
     }
     .sm\:overflow-x-scroll {
       overflow-x: scroll;

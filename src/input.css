@@ -42,14 +42,9 @@
   ::-webkit-scrollbar {
     @apply hidden;
   }
-
-
-
 }
 
-
 @layer components {
-
   .my-container {
     @apply px-6 sm:px-15 py-4 mt-7 sm:mt-15;
   }
@@ -59,8 +54,9 @@
     top-4 shadow-[0px_0px_50px_2.5px_rgba(255,255,255,0.1)]
     animate-fadeIn [animation-timeline:scroll(root)] 
     [animation-range:400px_1000px]
-    inset-x-4 sm:inset-x-15 py-4
-    mx-auto;
+    inset-x-4 sm:inset-x-15 py-4;
+    /* mx-auto */
+    
   }
 
   .nav-bar {

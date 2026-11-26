@@ -6,7 +6,7 @@
 
 A modern, responsive landing page for a health-tracking app that turns biomarkers, sleep, and activity into one clear picture.
 
-![Velo demo](velo-readme.gif)
+![Velo demo](src/video/velo-readme.gif)
 
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS_v4-06B6D4?logo=tailwindcss&logoColor=white)
@@ -36,8 +36,6 @@ Velo is a single-page marketing website built with plain HTML, Tailwind CSS v4, 
 - Custom design tokens defined in Tailwind's `@theme`
 - Reusable component classes (`btn-primary`, `btn-dark`, `btn-accent`, and more)
 
-
-
 ## Getting started
 
 ```bash
@@ -46,18 +44,13 @@ git clone https://github.com/Sondosprg/velo.git
 cd velo
 
 # 2. Install
-npm install 
+npm install
 
 # 3. Build the CSS and watch for changes
 npx @tailwindcss/cli -i ./input.css -o ./output.css --watch
 ```
 
-Then open `index.html` in your browser, or serve it locally:
-
-```bash
-npx serve .
-```
-
+Then open `index.html` in your browser (open with server)
 
 ## Author
 

@@ -14,10 +14,9 @@
   <link href="./output.css" rel="stylesheet" />
   <title>Velo</title>
   <!-- fonts -->
-  <link defer rel="preconnect" href="https://fonts.googleapis.com" />
-  <link defer rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link defer
-    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
     rel="stylesheet" />
 </head>
 
@@ -291,7 +290,7 @@
   </section>
 
   <!-- FEATURES -->
-  <section id="Features" class="h-auto">
+  <section id="Features">
     <div class="my-container">
       <div class="grid grid-rows-[1fr_auto] gap-y-7 sm:gap-14 py-7 sm:py-14 ">
         <!-- header -->
@@ -326,32 +325,32 @@
 
           <!-- image content -->
           <div class="h-full w-full ">
-            <img src="imgs/features/connect.png" loading="lazy"  class="rounded-xl w-full h-full" alt="Connect image" />
+            <img src="imgs/features/connect.png" loading="lazy" class="rounded-xl w-full h-full" alt="Connect image" />
           </div>
 
           <!-- explanations -->
           <div class=" space-y-4 md:space-y-8 h-full w-full md:col-span-2 lg:col-span-1 ">
             <div class=" space-y-2 md:space-y-4">
-            <h4 class="font-semibold text-2xl">
-              Every wearable, every <br />
-              lab synced live.
-            </h4>
-            <p class="text-description text-xs font-medium leading-4.5">
-              No CSV exports, no manual entries, no reconciling
-              spreadsheets. Vela pulls from Apple Health, Oura, Whoop,
-              Garmin, and 40+ partners — and keeps every reading in sync,
-              every minute of the day.
-            </p>
-          </div>
-          <div>
-            <button class="btn-dark">
-              Learn more
-            </button>
+              <h4 class="font-semibold text-2xl">
+                Every wearable, every <br />
+                lab synced live.
+              </h4>
+              <p class="text-description text-xs font-medium leading-4.5">
+                No CSV exports, no manual entries, no reconciling
+                spreadsheets. Vela pulls from Apple Health, Oura, Whoop,
+                Garmin, and 40+ partners — and keeps every reading in sync,
+                every minute of the day.
+              </p>
+            </div>
+            <div>
+              <button class="btn-dark">
+                Learn more
+              </button>
+            </div>
           </div>
         </div>
-      </div>
 
-    </div>
+      </div>
     </div>
   </section>
 
@@ -376,7 +375,7 @@
         </div>
 
         <!-- cards of reviews  (carousel)  -->
-        <div id="carsoul" class="grid  
+        <div id="carousel" class="grid  
           grid-rows-[100%_100%_100%]
           sm:grid-cols-[100%_100%_100%]
            md:grid-cols-[60%_60%_60%]
@@ -384,9 +383,10 @@
             sm:min-w-100 
             overflow-y-scroll
             sm:overflow-clip
-             sm:overflow-x-scroll">
+             sm:overflow-x-scroll
+             ">
           <!-- card review 01 -->
-          <div class="relative ">
+          <div class="relative card-img  ">
             <img src="imgs/reviews/01.jpg" loading="lazy" alt="review 01" class="review-img img" />
 
             <div class="absolute p-4 sm:p-8 inset-0 flex justify-between flex-col">
@@ -403,8 +403,8 @@
           </div>
 
           <!-- card review 02 -->
-          <div class="relative  ">
-            <img id="img" src="imgs/reviews/02.jfif" loading="lazy" alt="review 02"  class="review-img img" />
+          <div class="relative  card-img ">
+            <img id="img" src="imgs/reviews/02.jfif" loading="lazy" alt="review 02" class="review-img img" />
             <div class="absolute p-8 inset-0 flex justify-between flex-col">
               <h4 class="text-primary font-semibold text-md w-auto">
                 My doctor said my labs were 'fine.' Vela cross-referenced
@@ -419,8 +419,8 @@
           </div>
 
           <!-- card review 03-->
-          <div class="relative ">
-            <img src="imgs/reviews/03.jfif" loading="lazy" alt="review 03"  class="review-img img" />
+          <div class="relative card-img ">
+            <img src="imgs/reviews/03.jfif" loading="lazy" alt="review 03" class="review-img img" />
             <div class="absolute p-8 inset-0 flex justify-between flex-col">
               <h4 class="text-primary font-semibold text-md w-auto">
                 Vela helped me track my sleep and recovery patterns better
@@ -437,16 +437,24 @@
 
         <!-- controller -->
         <div class="flex gap-4 items-center mt-6">
-          <button class="bg-description/10 p-2 rounded-full text-center transition-all duration-300 active:scale-105">
-         
+          <!-- prev  -->
+          <button id="prev"
+            class="bg-description/10 p-2 rounded-full text-center transition-all duration-300 active:scale-105">
+
+            <!-- < icon  -->
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-             class="size-6 hidden md:block">
-  <path fill-rule="evenodd" d="M11.78 5.22a.75.75 0 0 1 0 1.06L8.06 10l3.72 3.72a.75.75 0 1 1-1.06 1.06l-4.25-4.25a.75.75 0 0 1 0-1.06l4.25-4.25a.75.75 0 0 1 1.06 0Z" clip-rule="evenodd" />
-</svg>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
- class="size-4 md:hidden">
-  <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
-</svg>
+              class="size-6 hidden sm:block">
+              <path fill-rule="evenodd"
+                d="M11.78 5.22a.75.75 0 0 1 0 1.06L8.06 10l3.72 3.72a.75.75 0 1 1-1.06 1.06l-4.25-4.25a.75.75 0 0 1 0-1.06l4.25-4.25a.75.75 0 0 1 1.06 0Z"
+                clip-rule="evenodd" />
+            </svg>
+
+            <!-- down icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-4 sm:hidden">
+              <path fill-rule="evenodd"
+                d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
+                clip-rule="evenodd" />
+            </svg>
 
           </button>
           <div class="flex gap-2 ">
@@ -454,15 +462,24 @@
             <div class="point"></div>
             <div class="point"></div>
           </div>
-          <button class="bg-description/10 p-2 rounded-full text-center transition-all duration-300 active:scale-105">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-           class="size-6 hidden md:block">
-  <path fill-rule="evenodd" d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
-</svg>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" 
-class="size-4 md:hidden ">
-  <path fill-rule="evenodd" d="M9.47 6.47a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 1 1-1.06 1.06L10 8.06l-3.72 3.72a.75.75 0 0 1-1.06-1.06l4.25-4.25Z" clip-rule="evenodd" />
-</svg>
+          <!-- next -->
+          <button id="next"
+            class="bg-description/10 p-2 rounded-full text-center transition-all duration-300 active:scale-105">
+
+            <!-- > icon  -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+              class="size-6 hidden sm:block">
+              <path fill-rule="evenodd"
+                d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z"
+                clip-rule="evenodd" />
+            </svg>
+
+            <!-- top icon -->
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-4 sm:hidden ">
+              <path fill-rule="evenodd"
+                d="M9.47 6.47a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 1 1-1.06 1.06L10 8.06l-3.72 3.72a.75.75 0 0 1-1.06-1.06l4.25-4.25Z"
+                clip-rule="evenodd" />
+            </svg>
 
 
           </button>
@@ -472,7 +489,7 @@ class="size-4 md:hidden ">
   </section>
 
   <!-- PRICING -->
-  <section id="Pricing" class="h-auto bg-bg">
+  <section id="Pricing" class="bg-smoke">
     <div class="my-container">
       <div class="flex  justify-center items-center flex-col  gap-7 sm:gap-14 py-7 sm:py-14">
         <!-- header of pricing -->
@@ -480,7 +497,7 @@ class="size-4 md:hidden ">
           ">
           <h6 class="mini-title">PRICING</h6>
           <h2 class="secondary-title">Two plans,
-            
+
           </h2>
           <h2 class="secondary-title">No surprises</h2>
 
@@ -689,7 +706,7 @@ class="size-4 md:hidden ">
   </section>
 
   <!-- FAQ -->
-  <section class="h-auto">
+  <section>
     <div class="my-container">
       <div class="grid grid-cols-1 md:grid-cols-2 items-center justify-between
           py-7 sm:py-14 gap-4 ">

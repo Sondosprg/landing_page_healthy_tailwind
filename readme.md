@@ -49,7 +49,7 @@ cd velo
 npm install
 
 # 3. Build the CSS and watch for changes
-npx @tailwindcss/cli -i ./input.css -o ./output.css --watch
+npx @tailwindcss/cli -i src/input.css -o src/output.css --watch 
 ```
 
 Then open `index.html` in your browser (open with server)

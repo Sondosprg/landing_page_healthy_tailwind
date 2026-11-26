@@ -17,7 +17,7 @@ A modern, responsive landing page for a health-tracking app that turns biomarker
 
 ## Overview
 
-Velo is a single-page marketing website built with plain HTML, Tailwind CSS v4, and vanilla JavaScript. No framework, no build step beyond the Tailwind CLI.
+Velo is a single-page marketing website built with plain HTML, Tailwind CSS . No framework, no build step beyond the Tailwind CLI.
 
 ## Sections
 
